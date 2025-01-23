@@ -4,7 +4,6 @@ import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -73,7 +72,7 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 16.0, 0.0, 4.0),
                         child: Text(
                           'Virement bancaire',
@@ -86,9 +85,9 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(-1.0, 0.0),
+                        alignment: const AlignmentDirectional(-1.0, 0.0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 0.0, 0.0),
                           child: Text(
                             'Confirmez votre virement',
@@ -102,15 +101,15 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Align(
-                              alignment: AlignmentDirectional(-1.0, 0.0),
+                              alignment: const AlignmentDirectional(-1.0, 0.0),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 0.0, 0.0),
                                 child: Text(
                                   'Étape 3 sur 3',
@@ -124,7 +123,7 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 12.0, 0.0, 0.0),
                               child: LinearPercentIndicator(
                                 percent: 1.0,
@@ -136,7 +135,7 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                                     FlutterFlowTheme.of(context).primary,
                                 backgroundColor:
                                     FlutterFlowTheme.of(context).alternate,
-                                barRadius: Radius.circular(24.0),
+                                barRadius: const Radius.circular(24.0),
                                 padding: EdgeInsets.zero,
                               ),
                             ),
@@ -144,11 +143,11 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 16.0, 16.0, 12.0),
                         child: Container(
                           width: double.infinity,
-                          constraints: BoxConstraints(
+                          constraints: const BoxConstraints(
                             maxWidth: 770.0,
                           ),
                           decoration: BoxDecoration(
@@ -157,14 +156,14 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                             borderRadius: BorderRadius.circular(12.0),
                           ),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 16.0, 16.0, 12.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, -1.0),
+                                  alignment: const AlignmentDirectional(0.0, -1.0),
                                   child: Text(
                                     'Vous envoyez...',
                                     style: FlutterFlowTheme.of(context)
@@ -176,11 +175,11 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, -1.0),
+                                  alignment: const AlignmentDirectional(0.0, -1.0),
                                   child: Text(
                                     '${valueOrDefault<String>(
-                                      widget!.transfertDataParam?.transferAmount
-                                          ?.toString(),
+                                      widget.transfertDataParam?.transferAmount
+                                          .toString(),
                                       '0',
                                     )} €',
                                     style: FlutterFlowTheme.of(context)
@@ -197,7 +196,7 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                                   color: FlutterFlowTheme.of(context).alternate,
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       12.0, 0.0, 12.0, 0.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -214,7 +213,7 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                                       ),
                                       Text(
                                         valueOrDefault<String>(
-                                          widget!.recipientDataParam
+                                          widget.recipientDataParam
                                               ?.recipientName,
                                           '[RecipientName]',
                                         ),
@@ -228,7 +227,7 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                                       ),
                                       Text(
                                         valueOrDefault<String>(
-                                          widget!.recipientDataParam
+                                          widget.recipientDataParam
                                               ?.recipientIBAN,
                                           '[RecipientIBAN]',
                                         ),
@@ -244,7 +243,7 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                                             ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsets.all(12.0),
+                                        padding: const EdgeInsets.all(12.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           mainAxisAlignment:
@@ -268,7 +267,7 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                                                 ),
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsets.all(2.0),
+                                                padding: const EdgeInsets.all(2.0),
                                                 child: ClipRRect(
                                                   borderRadius:
                                                       BorderRadius.circular(
@@ -285,12 +284,12 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                                               ),
                                             ),
                                             Stack(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 0.0),
                                               children: [
                                                 Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Container(
                                                     width: 120.0,
@@ -316,7 +315,7 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                                                     shape: BoxShape.circle,
                                                   ),
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Icon(
                                                     Icons
@@ -345,13 +344,13 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                                                 ),
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsets.all(2.0),
+                                                padding: const EdgeInsets.all(2.0),
                                                 child: ClipRRect(
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           40.0),
                                                   child: Image.network(
-                                                    widget!.recipientDataParam!
+                                                    widget.recipientDataParam!
                                                         .recipientPicture,
                                                     width: 60.0,
                                                     height: 60.0,
@@ -360,15 +359,15 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                                                 ),
                                               ),
                                             ),
-                                          ].divide(SizedBox(width: 16.0)),
+                                          ].divide(const SizedBox(width: 16.0)),
                                         ),
                                       ),
                                     ]
-                                        .divide(SizedBox(height: 4.0))
-                                        .addToEnd(SizedBox(height: 12.0)),
+                                        .divide(const SizedBox(height: 4.0))
+                                        .addToEnd(const SizedBox(height: 12.0)),
                                   ),
                                 ),
-                              ].divide(SizedBox(height: 8.0)),
+                              ].divide(const SizedBox(height: 8.0)),
                             ),
                           ),
                         ),
@@ -378,13 +377,13 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                 ),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(30.0, 30.0, 30.0, 0.0),
+                      const EdgeInsetsDirectional.fromSTEB(30.0, 30.0, 30.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.05),
+                        alignment: const AlignmentDirectional(0.0, 0.05),
                         child: FFButtonWidget(
                           onPressed: () async {
                             context.pushNamed('main_homePage');
@@ -392,9 +391,9 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                           text: 'Annuler',
                           options: FFButtonOptions(
                             height: 44.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 24.0, 0.0, 24.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
@@ -422,25 +421,25 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.05),
+                        alignment: const AlignmentDirectional(0.0, 0.05),
                         child: FFButtonWidget(
                           onPressed: () async {
-                            var _shouldSetState = false;
-                            if ((widget!.recipientDataParam?.recipientID !=
+                            var shouldSetState = false;
+                            if ((widget.recipientDataParam?.recipientID !=
                                         null &&
-                                    widget!.recipientDataParam?.recipientID !=
+                                    widget.recipientDataParam?.recipientID !=
                                         '') &&
-                                (widget!.transfertDataParam?.transferAmount !=
+                                (widget.transfertDataParam?.transferAmount !=
                                     null)) {
                               _model.transferFunctionOutput =
                                   await actions.toggleTransfer(
                                 currentUserUid,
-                                widget!.recipientDataParam!.recipientID,
-                                widget!.recipientDataParam!.recipientIBAN,
-                                widget!.transfertDataParam!.transferAmount,
-                                widget!.transfertDataParam?.transferReason,
+                                widget.recipientDataParam!.recipientID,
+                                widget.recipientDataParam!.recipientIBAN,
+                                widget.transfertDataParam!.transferAmount,
+                                widget.transfertDataParam?.transferReason,
                               );
-                              _shouldSetState = true;
+                              shouldSetState = true;
                               FFAppState().DEBUG = DebugStruct(
                                 error: _model.transferFunctionOutput?.message,
                               );
@@ -450,7 +449,7 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                                 context.pushNamed(
                                   'transfer_complete',
                                   extra: <String, dynamic>{
-                                    kTransitionInfoKey: TransitionInfo(
+                                    kTransitionInfoKey: const TransitionInfo(
                                       hasTransition: true,
                                       transitionType: PageTransitionType.fade,
                                     ),
@@ -464,14 +463,14 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                                     currentUserUid,
                                   ),
                                 );
-                                _shouldSetState = true;
+                                shouldSetState = true;
                                 FFAppState().updateUserAppStateStruct(
                                   (e) => e
                                     ..userBalance = _model
                                         .bankDataOutput?.firstOrNull?.balance,
                                 );
                                 safeSetState(() {});
-                                if (_shouldSetState) safeSetState(() {});
+                                if (shouldSetState) safeSetState(() {});
                                 return;
                               } else {
                                 context.pushNamed(
@@ -484,7 +483,7 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                                   }.withoutNulls,
                                 );
 
-                                if (_shouldSetState) safeSetState(() {});
+                                if (shouldSetState) safeSetState(() {});
                                 return;
                               }
                             } else {
@@ -493,18 +492,18 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                                 'errorr',
                                 'Une erreur est sruvenue',
                               );
-                              if (_shouldSetState) safeSetState(() {});
+                              if (shouldSetState) safeSetState(() {});
                               return;
                             }
 
-                            if (_shouldSetState) safeSetState(() {});
+                            if (shouldSetState) safeSetState(() {});
                           },
                           text: 'Confirmer',
                           options: FFButtonOptions(
                             height: 44.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 24.0, 0.0, 24.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
                             textStyle: FlutterFlowTheme.of(context)
@@ -514,7 +513,7 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                                   letterSpacing: 0.0,
                                 ),
                             elevation: 3.0,
-                            borderSide: BorderSide(
+                            borderSide: const BorderSide(
                               color: Colors.transparent,
                               width: 1.0,
                             ),

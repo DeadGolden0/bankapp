@@ -1,10 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'profile_change_password_model.dart';
 export 'profile_change_password_model.dart';
 
@@ -67,7 +65,7 @@ class _ProfileChangePasswordWidgetState
                 letterSpacing: 0.0,
               ),
         ),
-        actions: [],
+        actions: const [],
         centerTitle: false,
         elevation: 0.0,
       ),
@@ -86,7 +84,7 @@ class _ProfileChangePasswordWidgetState
           mainAxisSize: MainAxisSize.max,
           children: [
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -103,7 +101,7 @@ class _ProfileChangePasswordWidgetState
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
               child: TextFormField(
                 controller: _model.emailAddressTextController,
                 focusNode: _model.emailAddressFocusNode,
@@ -127,21 +125,21 @@ class _ProfileChangePasswordWidgetState
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                   focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Color(0x00000000),
                       width: 2.0,
                     ),
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                   errorBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Color(0x00000000),
                       width: 2.0,
                     ),
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                   focusedErrorBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Color(0x00000000),
                       width: 2.0,
                     ),
@@ -150,7 +148,7 @@ class _ProfileChangePasswordWidgetState
                   filled: true,
                   fillColor: FlutterFlowTheme.of(context).secondaryBackground,
                   contentPadding:
-                      EdgeInsetsDirectional.fromSTEB(20.0, 24.0, 20.0, 24.0),
+                      const EdgeInsetsDirectional.fromSTEB(20.0, 24.0, 20.0, 24.0),
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       font: GoogleFonts.lexend(),
@@ -161,7 +159,7 @@ class _ProfileChangePasswordWidgetState
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
               child: FFButtonWidget(
                 onPressed: () {
                   print('Button-Login pressed ...');
@@ -170,9 +168,9 @@ class _ProfileChangePasswordWidgetState
                 options: FFButtonOptions(
                   width: 190.0,
                   height: 50.0,
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   iconPadding:
-                      EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   color: FlutterFlowTheme.of(context).primary,
                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                         font: GoogleFonts.lexend(),
@@ -180,7 +178,7 @@ class _ProfileChangePasswordWidgetState
                         letterSpacing: 0.0,
                       ),
                   elevation: 3.0,
-                  borderSide: BorderSide(
+                  borderSide: const BorderSide(
                     color: Colors.transparent,
                     width: 1.0,
                   ),

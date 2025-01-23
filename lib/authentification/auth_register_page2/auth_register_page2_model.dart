@@ -1,17 +1,8 @@
-import '/auth/supabase_auth/auth_util.dart';
-import '/backend/schema/structs/index.dart';
 import '/backend/supabase/supabase.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/instant_timer.dart';
-import '/flutter_flow/upload_data.dart';
-import 'dart:ui';
 import 'auth_register_page2_widget.dart' show AuthRegisterPage2Widget;
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class AuthRegisterPage2Model extends FlutterFlowModel<AuthRegisterPage2Widget> {
   ///  Local state fields for this page.

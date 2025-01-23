@@ -3,7 +3,6 @@ import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -79,7 +78,7 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 16.0, 0.0, 4.0),
                             child: Text(
                               'Virement bancaire',
@@ -92,9 +91,9 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(-1.0, 0.0),
+                            alignment: const AlignmentDirectional(-1.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 0.0, 0.0, 0.0),
                               child: Text(
                                 'Choissisez le montant',
@@ -108,15 +107,15 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Align(
-                                  alignment: AlignmentDirectional(-1.0, 0.0),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 0.0, 0.0),
                                     child: Text(
                                       'Étape 2 sur 3',
@@ -130,7 +129,7 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 12.0, 0.0, 0.0),
                                   child: LinearPercentIndicator(
                                     percent: 0.6,
@@ -143,7 +142,7 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                         FlutterFlowTheme.of(context).primary,
                                     backgroundColor:
                                         FlutterFlowTheme.of(context).alternate,
-                                    barRadius: Radius.circular(8.0),
+                                    barRadius: const Radius.circular(8.0),
                                     padding: EdgeInsets.zero,
                                   ),
                                 ),
@@ -151,7 +150,7 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Builder(
                               builder: (context) {
                                 if (_model.recipientIsFind == true) {
@@ -159,7 +158,7 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 16.0, 0.0, 0.0),
                                         child: Container(
                                           width: double.infinity,
@@ -169,13 +168,13 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                           ),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     18.0, 16.0, 16.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 5.0, 0.0),
                                                   child: Container(
@@ -199,7 +198,7 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                                     ),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsets.all(2.0),
+                                                          const EdgeInsets.all(2.0),
                                                       child: ClipRRect(
                                                         borderRadius:
                                                             BorderRadius
@@ -207,11 +206,11 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                                         child:
                                                             CachedNetworkImage(
                                                           fadeInDuration:
-                                                              Duration(
+                                                              const Duration(
                                                                   milliseconds:
                                                                       500),
                                                           fadeOutDuration:
-                                                              Duration(
+                                                              const Duration(
                                                                   milliseconds:
                                                                       500),
                                                           imageUrl: _model
@@ -229,7 +228,7 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                                 Flexible(
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(5.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: Column(
@@ -290,7 +289,7 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             16.0, 30.0, 16.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -298,7 +297,7 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                               MainAxisAlignment.spaceBetween,
                                           children: [
                                             Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 0.05),
                                               child: FFButtonWidget(
                                                 onPressed: () async {
@@ -307,11 +306,11 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                                 text: 'Retour',
                                                 options: FFButtonOptions(
                                                   height: 48.0,
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           44.0, 0.0, 44.0, 0.0),
                                                   iconPadding:
-                                                      EdgeInsetsDirectional
+                                                      const EdgeInsetsDirectional
                                                           .fromSTEB(0.0, 0.0,
                                                               0.0, 0.0),
                                                   color: FlutterFlowTheme.of(
@@ -356,7 +355,7 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                               ),
                                             ),
                                             Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 0.05),
                                               child: FFButtonWidget(
                                                 onPressed: () async {
@@ -394,11 +393,11 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                                             serializeParam(
                                                           TransfertDataStruct(
                                                             transferAmount:
-                                                                widget!
+                                                                widget
                                                                     .tempAmount
                                                                     ?.toDouble(),
                                                             transferReason:
-                                                                widget!
+                                                                widget
                                                                     .tempReason,
                                                           ),
                                                           ParamType.DataStruct,
@@ -406,7 +405,7 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                                       }.withoutNulls,
                                                       extra: <String, dynamic>{
                                                         kTransitionInfoKey:
-                                                            TransitionInfo(
+                                                            const TransitionInfo(
                                                           hasTransition: true,
                                                           transitionType:
                                                               PageTransitionType
@@ -431,11 +430,11 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                                 text: 'Suivant',
                                                 options: FFButtonOptions(
                                                   height: 48.0,
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           44.0, 0.0, 44.0, 0.0),
                                                   iconPadding:
-                                                      EdgeInsetsDirectional
+                                                      const EdgeInsetsDirectional
                                                           .fromSTEB(0.0, 0.0,
                                                               0.0, 0.0),
                                                   color: FlutterFlowTheme.of(
@@ -454,7 +453,7 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                                         letterSpacing: 0.0,
                                                       ),
                                                   elevation: 3.0,
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Colors.transparent,
                                                     width: 1.0,
                                                   ),
@@ -494,7 +493,7 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                             AutovalidateMode.disabled,
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 25.0, 16.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -503,10 +502,10 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                             children: [
                                               Expanded(
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 16.0, 0.0, 0.0),
-                                                  child: Container(
+                                                  child: SizedBox(
                                                     width: 200.0,
                                                     child: TextFormField(
                                                       controller: _model
@@ -608,7 +607,7 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                                                 .of(context)
                                                             .secondaryBackground,
                                                         contentPadding:
-                                                            EdgeInsets.all(
+                                                            const EdgeInsets.all(
                                                                 20.0),
                                                       ),
                                                       style: FlutterFlowTheme
@@ -638,7 +637,7 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             16.0, 30.0, 16.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -646,7 +645,7 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                               MainAxisAlignment.spaceBetween,
                                           children: [
                                             Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 0.05),
                                               child: FFButtonWidget(
                                                 onPressed: () async {
@@ -655,11 +654,11 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                                 text: 'Retour',
                                                 options: FFButtonOptions(
                                                   height: 48.0,
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           44.0, 0.0, 44.0, 0.0),
                                                   iconPadding:
-                                                      EdgeInsetsDirectional
+                                                      const EdgeInsetsDirectional
                                                           .fromSTEB(0.0, 0.0,
                                                               0.0, 0.0),
                                                   color: FlutterFlowTheme.of(
@@ -704,11 +703,11 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                               ),
                                             ),
                                             Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 0.05),
                                               child: FFButtonWidget(
                                                 onPressed: () async {
-                                                  var _shouldSetState = false;
+                                                  var shouldSetState = false;
                                                   if (_model.formKey
                                                               .currentState ==
                                                           null ||
@@ -734,7 +733,7 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                                             .text,
                                                       ),
                                                     );
-                                                    _shouldSetState = true;
+                                                    shouldSetState = true;
                                                     if (_model.bankAccountOutput !=
                                                             null &&
                                                         (_model.bankAccountOutput)!
@@ -751,12 +750,13 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                                               ?.ownerId,
                                                         ),
                                                       );
-                                                      _shouldSetState = true;
+                                                      shouldSetState = true;
                                                       _model.recipientIsFind =
                                                           true;
                                                       safeSetState(() {});
-                                                      if (_shouldSetState)
+                                                      if (shouldSetState) {
                                                         safeSetState(() {});
+                                                      }
                                                       return;
                                                     } else {
                                                       await actions
@@ -765,8 +765,9 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                                         'error',
                                                         'Une erreur est survenue!',
                                                       );
-                                                      if (_shouldSetState)
+                                                      if (shouldSetState) {
                                                         safeSetState(() {});
+                                                      }
                                                       return;
                                                     }
                                                   } else {
@@ -776,22 +777,24 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                                       'error',
                                                       'Vous ne pouvez pas effectuer un virement vers vous-même.',
                                                     );
-                                                    if (_shouldSetState)
+                                                    if (shouldSetState) {
                                                       safeSetState(() {});
+                                                    }
                                                     return;
                                                   }
 
-                                                  if (_shouldSetState)
+                                                  if (shouldSetState) {
                                                     safeSetState(() {});
+                                                  }
                                                 },
                                                 text: 'Rechercher',
                                                 options: FFButtonOptions(
                                                   height: 48.0,
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           44.0, 0.0, 44.0, 0.0),
                                                   iconPadding:
-                                                      EdgeInsetsDirectional
+                                                      const EdgeInsetsDirectional
                                                           .fromSTEB(0.0, 0.0,
                                                               0.0, 0.0),
                                                   color: FlutterFlowTheme.of(
@@ -810,7 +813,7 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                                         letterSpacing: 0.0,
                                                       ),
                                                   elevation: 3.0,
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Colors.transparent,
                                                     width: 1.0,
                                                   ),

@@ -1,12 +1,9 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'payment_details_model.dart';
 export 'payment_details_model.dart';
 
@@ -66,7 +63,7 @@ class _PaymentDetailsWidgetState extends State<PaymentDetailsWidget> {
         ),
         actions: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 0.0),
             child: FlutterFlowIconButton(
               borderColor: Colors.transparent,
               borderRadius: 30.0,
@@ -99,7 +96,7 @@ class _PaymentDetailsWidgetState extends State<PaymentDetailsWidget> {
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
@@ -120,7 +117,7 @@ class _PaymentDetailsWidgetState extends State<PaymentDetailsWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(20.0, 4.0, 20.0, 20.0),
+                        const EdgeInsetsDirectional.fromSTEB(20.0, 4.0, 20.0, 20.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
@@ -144,7 +141,7 @@ class _PaymentDetailsWidgetState extends State<PaymentDetailsWidget> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20.0, 16.0, 20.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 16.0, 20.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -161,7 +158,7 @@ class _PaymentDetailsWidgetState extends State<PaymentDetailsWidget> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20.0, 4.0, 20.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 4.0, 20.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -180,7 +177,7 @@ class _PaymentDetailsWidgetState extends State<PaymentDetailsWidget> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20.0, 16.0, 20.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 16.0, 20.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -197,7 +194,7 @@ class _PaymentDetailsWidgetState extends State<PaymentDetailsWidget> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20.0, 4.0, 20.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 4.0, 20.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -209,7 +206,7 @@ class _PaymentDetailsWidgetState extends State<PaymentDetailsWidget> {
                         ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(4.0, 0.0, 0.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(4.0, 0.0, 0.0, 0.0),
                     child: Text(
                       'Jul 26, 10:00am',
                       style: FlutterFlowTheme.of(context).bodySmall.override(
@@ -223,14 +220,14 @@ class _PaymentDetailsWidgetState extends State<PaymentDetailsWidget> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20.0, 4.0, 20.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 4.0, 20.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Expanded(
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                       child: Text(
                         'Reason',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -244,7 +241,7 @@ class _PaymentDetailsWidgetState extends State<PaymentDetailsWidget> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20.0, 4.0, 20.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 4.0, 20.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -261,7 +258,7 @@ class _PaymentDetailsWidgetState extends State<PaymentDetailsWidget> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -278,7 +275,7 @@ class _PaymentDetailsWidgetState extends State<PaymentDetailsWidget> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -296,7 +293,7 @@ class _PaymentDetailsWidgetState extends State<PaymentDetailsWidget> {
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             12.0, 0.0, 12.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -309,18 +306,18 @@ class _PaymentDetailsWidgetState extends State<PaymentDetailsWidget> {
                                 borderRadius: BorderRadius.circular(40.0),
                               ),
                               child: Padding(
-                                padding: EdgeInsets.all(2.0),
+                                padding: const EdgeInsets.all(2.0),
                                 child: Container(
                                   width: 40.0,
                                   height: 40.0,
                                   clipBehavior: Clip.antiAlias,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     shape: BoxShape.circle,
                                   ),
                                   child: CachedNetworkImage(
-                                    fadeInDuration: Duration(milliseconds: 500),
+                                    fadeInDuration: const Duration(milliseconds: 500),
                                     fadeOutDuration:
-                                        Duration(milliseconds: 500),
+                                        const Duration(milliseconds: 500),
                                     imageUrl:
                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/sample-app-e-comm-3oxq8y/assets/hszmaloprc7a/Mia%20Deaven.jpg',
                                     fit: BoxFit.fitWidth,
@@ -329,7 +326,7 @@ class _PaymentDetailsWidgetState extends State<PaymentDetailsWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   12.0, 0.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,

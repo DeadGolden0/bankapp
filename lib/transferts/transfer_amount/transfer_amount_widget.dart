@@ -1,12 +1,10 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
-import 'package:provider/provider.dart';
 import 'transfer_amount_model.dart';
 export 'transfer_amount_model.dart';
 
@@ -70,7 +68,7 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 16.0, 0.0, 4.0),
                             child: Text(
                               'Virement bancaire',
@@ -83,9 +81,9 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(-1.0, 0.0),
+                            alignment: const AlignmentDirectional(-1.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 0.0, 0.0, 0.0),
                               child: Text(
                                 'Choissisez le montant',
@@ -99,15 +97,15 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Align(
-                                  alignment: AlignmentDirectional(-1.0, 0.0),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 0.0, 0.0),
                                     child: Text(
                                       'Étape 1 sur 3',
@@ -121,7 +119,7 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 12.0, 0.0, 0.0),
                                   child: LinearPercentIndicator(
                                     percent: 0.35,
@@ -134,12 +132,12 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                                         FlutterFlowTheme.of(context).primary,
                                     backgroundColor:
                                         FlutterFlowTheme.of(context).alternate,
-                                    barRadius: Radius.circular(8.0),
+                                    barRadius: const Radius.circular(8.0),
                                     padding: EdgeInsets.zero,
                                   ),
                                 ),
                                 Container(
-                                  decoration: BoxDecoration(),
+                                  decoration: const BoxDecoration(),
                                   child: Form(
                                     key: _model.formKey,
                                     autovalidateMode: AutovalidateMode.disabled,
@@ -148,7 +146,7 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                                       children: [
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 25.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -157,7 +155,7 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                                             children: [
                                               Expanded(
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 16.0, 0.0, 0.0),
                                                   child: TextFormField(
@@ -250,7 +248,7 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                                                               .of(context)
                                                           .secondaryBackground,
                                                       contentPadding:
-                                                          EdgeInsets.all(20.0),
+                                                          const EdgeInsets.all(20.0),
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -284,7 +282,7 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 5.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -293,7 +291,7 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                                             children: [
                                               Expanded(
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 16.0, 0.0, 0.0),
                                                   child: TextFormField(
@@ -386,7 +384,7 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                                                               .of(context)
                                                           .secondaryBackground,
                                                       contentPadding:
-                                                          EdgeInsets.all(20.0),
+                                                          const EdgeInsets.all(20.0),
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -412,7 +410,7 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 30.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -420,7 +418,7 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 0.05),
                                                 child: FFButtonWidget(
                                                   onPressed: () async {
@@ -430,11 +428,11 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                                                   options: FFButtonOptions(
                                                     height: 48.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(44.0, 0.0,
                                                                 44.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -480,7 +478,7 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                                                 ),
                                               ),
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 0.05),
                                                 child: FFButtonWidget(
                                                   onPressed: () async {
@@ -513,7 +511,7 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                                                       }.withoutNulls,
                                                       extra: <String, dynamic>{
                                                         kTransitionInfoKey:
-                                                            TransitionInfo(
+                                                            const TransitionInfo(
                                                           hasTransition: true,
                                                           transitionType:
                                                               PageTransitionType
@@ -526,11 +524,11 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                                                   options: FFButtonOptions(
                                                     height: 48.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(44.0, 0.0,
                                                                 44.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -548,7 +546,7 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),

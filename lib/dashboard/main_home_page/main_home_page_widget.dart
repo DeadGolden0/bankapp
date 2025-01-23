@@ -1,10 +1,7 @@
-import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/components/empty_transaction/empty_transaction_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -60,7 +57,7 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(16.0, 10.0, 16.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(16.0, 10.0, 16.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
@@ -71,12 +68,12 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                             borderRadius: BorderRadius.circular(40.0),
                           ),
                           child: Padding(
-                            padding: EdgeInsets.all(2.0),
+                            padding: const EdgeInsets.all(2.0),
                             child: Container(
                               width: 60.0,
                               height: 60.0,
                               clipBehavior: Clip.antiAlias,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 shape: BoxShape.circle,
                               ),
                               child: Image.network(
@@ -90,7 +87,7 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                         ),
                         Flexible(
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 12.0, 0.0, 0.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -110,7 +107,7 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                                           ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           4.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         valueOrDefault<String>(
@@ -148,7 +145,7 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -157,7 +154,7 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                           width: MediaQuery.sizeOf(context).width * 0.92,
                           height: 190.0,
                           decoration: BoxDecoration(
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                 blurRadius: 6.0,
                                 color: Color(0x4B1A1F24),
@@ -169,12 +166,12 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                             ],
                             gradient: LinearGradient(
                               colors: [
-                                Color(0xFF00968A),
+                                const Color(0xFF00968A),
                                 FlutterFlowTheme.of(context).secondaryBackground
                               ],
-                              stops: [0.0, 1.0],
-                              begin: AlignmentDirectional(0.94, -1.0),
-                              end: AlignmentDirectional(-0.94, 1.0),
+                              stops: const [0.0, 1.0],
+                              begin: const AlignmentDirectional(0.94, -1.0),
+                              end: const AlignmentDirectional(-0.94, 1.0),
                             ),
                             borderRadius: BorderRadius.circular(8.0),
                           ),
@@ -184,7 +181,7 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 20.0, 20.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -199,7 +196,7 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 36.0, 20.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -219,7 +216,7 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 8.0, 20.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -240,7 +237,7 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 20.0, 20.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -280,7 +277,7 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -312,7 +309,7 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                                   size: 40.0,
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 8.0, 0.0, 0.0),
                                   child: Text(
                                     'Virement',
@@ -346,7 +343,7 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                                 size: 40.0,
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 8.0, 0.0, 0.0),
                                 child: Text(
                                   'Mes cartes',
@@ -379,7 +376,7 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                                 size: 40.0,
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 8.0, 0.0, 0.0),
                                 child: Text(
                                   'Mes comptes',
@@ -399,14 +396,14 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
                     child: SafeArea(
                       child: Container(
                         width: MediaQuery.sizeOf(context).width * 1.0,
                         decoration: BoxDecoration(
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               blurRadius: 3.0,
                               color: Color(0x33000000),
@@ -424,13 +421,13 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                           ),
                         ),
                         child: Padding(
-                          padding: EdgeInsets.all(12.0),
+                          padding: const EdgeInsets.all(12.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -461,13 +458,13 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                      ].divide(SizedBox(height: 4.0)),
+                                      ].divide(const SizedBox(height: 4.0)),
                                     ),
                                   ],
                                 ),
                               ),
                               Container(
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                                 child: FutureBuilder<List<HistoriqueRow>>(
                                   future: HistoriqueTable().queryRows(
                                     queryFn: (q) => q.or(
@@ -495,7 +492,7 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                                         snapshot.data!;
 
                                     if (columnHistoriqueRowList.isEmpty) {
-                                      return Container(
+                                      return const SizedBox(
                                         height: 300.0,
                                         child: EmptyTransactionWidget(),
                                       );
@@ -511,7 +508,7 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                                                 columnIndex];
                                         return Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 12.0),
                                           child: Container(
                                             width: MediaQuery.sizeOf(context)
@@ -529,13 +526,13 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           8.0, 0.0, 0.0, 0.0),
                                                   child: Card(
                                                     clipBehavior: Clip
                                                         .antiAliasWithSaveLayer,
-                                                    color: Color(0x6639D2C0),
+                                                    color: const Color(0x6639D2C0),
                                                     shape:
                                                         RoundedRectangleBorder(
                                                       borderRadius:
@@ -544,7 +541,7 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                                                     ),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsets.all(8.0),
+                                                          const EdgeInsets.all(8.0),
                                                       child: Icon(
                                                         Icons
                                                             .monetization_on_rounded,
@@ -560,7 +557,7 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                                                 Expanded(
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(12.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: Column(
@@ -592,7 +589,7 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       4.0,
@@ -616,7 +613,7 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 0.0, 12.0, 0.0),
                                                   child: Column(
@@ -648,7 +645,7 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     4.0,
@@ -699,7 +696,7 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                       ),
                     ),
                   ),
-                ].addToEnd(SizedBox(height: 44.0)),
+                ].addToEnd(const SizedBox(height: 44.0)),
               ),
             ),
           ),

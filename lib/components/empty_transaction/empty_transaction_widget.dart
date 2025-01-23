@@ -1,10 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
-import 'package:provider/provider.dart';
 import 'empty_transaction_model.dart';
 export 'empty_transaction_model.dart';
 
@@ -43,7 +41,7 @@ class _EmptyTransactionWidgetState extends State<EmptyTransactionWidget> {
       mainAxisSize: MainAxisSize.max,
       children: [
         Align(
-          alignment: AlignmentDirectional(0.0, 0.0),
+          alignment: const AlignmentDirectional(0.0, 0.0),
           child: Lottie.asset(
             'assets/jsons/CertificationEmpty.json',
             width: 200.0,
@@ -53,7 +51,7 @@ class _EmptyTransactionWidgetState extends State<EmptyTransactionWidget> {
           ),
         ),
         Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+          padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
           child: Text(
             'Oups, il semble que vous n\'ayez aucune transactions.',
             textAlign: TextAlign.center,

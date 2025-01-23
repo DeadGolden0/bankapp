@@ -1,23 +1,17 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
 import '/backend/schema/structs/index.dart';
 
-import '/backend/supabase/supabase.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
 import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/lat_lng.dart';
-import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'serialization_util.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -85,82 +79,82 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? NavBarPage() : AuthLoginPageWidget(),
+          appStateNotifier.loggedIn ? const NavBarPage() : const AuthLoginPageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? NavBarPage() : AuthLoginPageWidget(),
+              appStateNotifier.loggedIn ? const NavBarPage() : const AuthLoginPageWidget(),
         ),
         FFRoute(
           name: 'auth_loginPage',
           path: '/authLoginPage',
-          builder: (context, params) => AuthLoginPageWidget(),
+          builder: (context, params) => const AuthLoginPageWidget(),
         ),
         FFRoute(
           name: 'auth_registerPage',
           path: '/authRegisterPage',
-          builder: (context, params) => AuthRegisterPageWidget(),
+          builder: (context, params) => const AuthRegisterPageWidget(),
         ),
         FFRoute(
           name: 'auth_forgotPassword',
           path: '/authForgotPassword',
-          builder: (context, params) => AuthForgotPasswordWidget(),
+          builder: (context, params) => const AuthForgotPasswordWidget(),
         ),
         FFRoute(
           name: 'onboarding',
           path: '/onboarding',
-          builder: (context, params) => OnboardingWidget(),
+          builder: (context, params) => const OnboardingWidget(),
         ),
         FFRoute(
           name: 'main_cardsPage',
           path: '/mainCardsPage',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'main_cardsPage')
-              : MainCardsPageWidget(),
+              ? const NavBarPage(initialPage: 'main_cardsPage')
+              : const MainCardsPageWidget(),
         ),
         FFRoute(
           name: 'paymentDetails',
           path: '/paymentDetails',
-          builder: (context, params) => PaymentDetailsWidget(),
+          builder: (context, params) => const PaymentDetailsWidget(),
         ),
         FFRoute(
           name: 'main_profilePage',
           path: '/mainProfilePage',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'main_profilePage')
-              : MainProfilePageWidget(),
+              ? const NavBarPage(initialPage: 'main_profilePage')
+              : const MainProfilePageWidget(),
         ),
         FFRoute(
           name: 'transfer_complete',
           path: '/transferComplete',
-          builder: (context, params) => TransferCompleteWidget(),
+          builder: (context, params) => const TransferCompleteWidget(),
         ),
         FFRoute(
           name: 'profile_editProfile',
           path: '/profileEditProfile',
-          builder: (context, params) => ProfileEditProfileWidget(),
+          builder: (context, params) => const ProfileEditProfileWidget(),
         ),
         FFRoute(
           name: 'profile_changePassword',
           path: '/profileChangePassword',
-          builder: (context, params) => ProfileChangePasswordWidget(),
+          builder: (context, params) => const ProfileChangePasswordWidget(),
         ),
         FFRoute(
           name: 'profile_notificationsSettings',
           path: '/profileNotificationsSettings',
-          builder: (context, params) => ProfileNotificationsSettingsWidget(),
+          builder: (context, params) => const ProfileNotificationsSettingsWidget(),
         ),
         FFRoute(
           name: 'profile_privacyPolicy',
           path: '/profilePrivacyPolicy',
-          builder: (context, params) => ProfilePrivacyPolicyWidget(),
+          builder: (context, params) => const ProfilePrivacyPolicyWidget(),
         ),
         FFRoute(
           name: 'tutorial_PROFILE',
           path: '/tutorialPROFILE',
-          builder: (context, params) => TutorialPROFILEWidget(),
+          builder: (context, params) => const TutorialPROFILEWidget(),
         ),
         FFRoute(
           name: 'auth_registerPage2',
@@ -183,14 +177,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'main_homePage_OLD',
           path: '/mainHomePageOLD',
-          builder: (context, params) => MainHomePageOLDWidget(),
+          builder: (context, params) => const MainHomePageOLDWidget(),
         ),
         FFRoute(
           name: 'main_homePage',
           path: '/mainHomePage',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'main_homePage')
-              : NavBarPage(
+              ? const NavBarPage(initialPage: 'main_homePage')
+              : const NavBarPage(
                   initialPage: 'main_homePage',
                   page: MainHomePageWidget(),
                 ),
@@ -212,7 +206,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'transfer_amount',
           path: '/transferAmount',
-          builder: (context, params) => TransferAmountWidget(),
+          builder: (context, params) => const TransferAmountWidget(),
         ),
         FFRoute(
           name: 'transfer_recap',
@@ -478,7 +472,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

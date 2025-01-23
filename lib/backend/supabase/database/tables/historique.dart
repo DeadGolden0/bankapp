@@ -9,7 +9,7 @@ class HistoriqueTable extends SupabaseTable<HistoriqueRow> {
 }
 
 class HistoriqueRow extends SupabaseDataRow {
-  HistoriqueRow(Map<String, dynamic> data) : super(data);
+  HistoriqueRow(super.data);
 
   @override
   SupabaseTable get table => HistoriqueTable();

@@ -1,16 +1,13 @@
 import '/auth/supabase_auth/auth_util.dart';
-import '/backend/schema/structs/index.dart';
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/instant_timer.dart';
 import '/flutter_flow/upload_data.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'auth_register_page2_model.dart';
 export 'auth_register_page2_model.dart';
 
@@ -76,7 +73,7 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                 letterSpacing: 0.0,
               ),
         ),
-        actions: [],
+        actions: const [],
         centerTitle: false,
         elevation: 0.0,
       ),
@@ -92,7 +89,7 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
           ),
         ),
         child: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
           child: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.max,
@@ -111,7 +108,7 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                           width: 80.0,
                           height: 80.0,
                           clipBehavior: Clip.antiAlias,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             shape: BoxShape.circle,
                           ),
                           child: Image.memory(
@@ -124,7 +121,7 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                           width: 80.0,
                           height: 80.0,
                           clipBehavior: Clip.antiAlias,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             shape: BoxShape.circle,
                           ),
                           child: Image.network(
@@ -136,7 +133,7 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                   child: FFButtonWidget(
                     onPressed: () async {
                       final selectedMedia = await selectMedia(
@@ -184,8 +181,7 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                         }
                       }
 
-                      if (_model.uploadedLocalFile1 != null &&
-                          (_model.uploadedLocalFile1.bytes?.isNotEmpty ??
+                      if ((_model.uploadedLocalFile1.bytes?.isNotEmpty ??
                               false)) {
                         _model.pictureSet = true;
                         safeSetState(() {});
@@ -199,7 +195,7 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                                 color: FlutterFlowTheme.of(context).primaryText,
                               ),
                             ),
-                            duration: Duration(milliseconds: 4000),
+                            duration: const Duration(milliseconds: 4000),
                             backgroundColor:
                                 FlutterFlowTheme.of(context).secondary,
                           ),
@@ -212,9 +208,9 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                       width: 140.0,
                       height: 40.0,
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).secondaryBackground,
                       textStyle:
                           FlutterFlowTheme.of(context).bodySmall.override(
@@ -237,7 +233,7 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 20.0, 0.0),
                         child: TextFormField(
                           controller: _model.firstNameTextController,
@@ -287,7 +283,7 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                             filled: true,
                             fillColor: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
-                            contentPadding: EdgeInsetsDirectional.fromSTEB(
+                            contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 24.0, 20.0, 24.0),
                           ),
                           style:
@@ -301,7 +297,7 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 20.0, 0.0),
                         child: TextFormField(
                           controller: _model.lastNameTextController,
@@ -351,7 +347,7 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                             filled: true,
                             fillColor: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
-                            contentPadding: EdgeInsetsDirectional.fromSTEB(
+                            contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 24.0, 20.0, 24.0),
                           ),
                           style:
@@ -364,7 +360,7 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 20.0, 0.0),
                         child: TextFormField(
                           controller: _model.addressTextController,
@@ -414,7 +410,7 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                             filled: true,
                             fillColor: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
-                            contentPadding: EdgeInsetsDirectional.fromSTEB(
+                            contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 24.0, 20.0, 24.0),
                           ),
                           style:
@@ -427,7 +423,7 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 20.0, 0.0),
                         child: TextFormField(
                           controller: _model.phoneTextController,
@@ -477,7 +473,7 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                             filled: true,
                             fillColor: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
-                            contentPadding: EdgeInsetsDirectional.fromSTEB(
+                            contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 24.0, 20.0, 24.0),
                           ),
                           style:
@@ -501,7 +497,7 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
                         child: FFButtonWidget(
                           onPressed: () async {
                             if (_model.formKey.currentState == null ||
@@ -509,10 +505,10 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                               return;
                             }
                             GoRouter.of(context).prepareAuthEvent();
-                            if (widget!.tempPassword! !=
-                                widget!.tempPasswordConfirm!) {
+                            if (widget.tempPassword! !=
+                                widget.tempPasswordConfirm!) {
                               ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(
+                                const SnackBar(
                                   content: Text(
                                     'Passwords don\'t match!',
                                   ),
@@ -524,8 +520,8 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                             final user =
                                 await authManager.createAccountWithEmail(
                               context,
-                              widget!.tempEmail!,
-                              widget!.tempPassword!,
+                              widget.tempEmail!,
+                              widget.tempPassword!,
                             );
                             if (user == null) {
                               return;
@@ -552,7 +548,7 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                                       selectedFilesFromUploadedFiles(
                                     selectedUploadedFiles,
                                     storageFolderPath:
-                                        'avatars/${currentUserUid}',
+                                        'avatars/$currentUserUid',
                                   );
                                   downloadUrls =
                                       await uploadSupabaseStorageFiles(
@@ -625,7 +621,7 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                             await Future.wait([
                               Future(() async {
                                 _model.instantTimer = InstantTimer.periodic(
-                                  duration: Duration(milliseconds: 5000),
+                                  duration: const Duration(milliseconds: 5000),
                                   callback: (timer) async {
                                     context.pushNamedAuth(
                                         'main_homePage', context.mounted);
@@ -663,9 +659,9 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                           options: FFButtonOptions(
                             width: 230.0,
                             height: 56.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
                             textStyle: FlutterFlowTheme.of(context)
@@ -676,7 +672,7 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                                   letterSpacing: 0.0,
                                 ),
                             elevation: 3.0,
-                            borderSide: BorderSide(
+                            borderSide: const BorderSide(
                               color: Colors.transparent,
                               width: 1.0,
                             ),

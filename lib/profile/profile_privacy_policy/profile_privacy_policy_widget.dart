@@ -1,10 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'profile_privacy_policy_model.dart';
 export 'profile_privacy_policy_model.dart';
 
@@ -64,7 +61,7 @@ class _ProfilePrivacyPolicyWidgetState
                 letterSpacing: 0.0,
               ),
         ),
-        actions: [],
+        actions: const [],
         centerTitle: false,
         elevation: 0.0,
       ),
@@ -73,7 +70,7 @@ class _ProfilePrivacyPolicyWidgetState
           mainAxisSize: MainAxisSize.max,
           children: [
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -90,7 +87,7 @@ class _ProfilePrivacyPolicyWidgetState
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 44.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 44.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [

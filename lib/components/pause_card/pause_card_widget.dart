@@ -1,10 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'pause_card_model.dart';
 export 'pause_card_model.dart';
 
@@ -46,7 +44,7 @@ class _PauseCardWidgetState extends State<PauseCardWidget> {
         color: FlutterFlowTheme.of(context).secondaryBackground,
       ),
       child: Padding(
-        padding: EdgeInsets.all(24.0),
+        padding: const EdgeInsets.all(24.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
@@ -63,7 +61,7 @@ class _PauseCardWidgetState extends State<PauseCardWidget> {
               ],
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -80,7 +78,7 @@ class _PauseCardWidgetState extends State<PauseCardWidget> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 44.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 44.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -94,9 +92,9 @@ class _PauseCardWidgetState extends State<PauseCardWidget> {
                       width: 150.0,
                       height: 50.0,
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).primaryBackground,
                       textStyle:
                           FlutterFlowTheme.of(context).bodySmall.override(
@@ -105,7 +103,7 @@ class _PauseCardWidgetState extends State<PauseCardWidget> {
                                 letterSpacing: 0.0,
                               ),
                       elevation: 2.0,
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Colors.transparent,
                         width: 1.0,
                       ),
@@ -121,9 +119,9 @@ class _PauseCardWidgetState extends State<PauseCardWidget> {
                       width: 150.0,
                       height: 50.0,
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
@@ -132,7 +130,7 @@ class _PauseCardWidgetState extends State<PauseCardWidget> {
                                 letterSpacing: 0.0,
                               ),
                       elevation: 2.0,
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Colors.transparent,
                         width: 1.0,
                       ),
