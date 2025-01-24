@@ -2,7 +2,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'auth_forgot_password_model.dart';
 export 'auth_forgot_password_model.dart';
 
@@ -60,7 +59,7 @@ class _AuthForgotPasswordWidgetState extends State<AuthForgotPasswordWidget> {
         title: Text(
           'Mot de passe oublié',
           style: FlutterFlowTheme.of(context).headlineSmall.override(
-                font: GoogleFonts.lexend(),
+                fontFamily: 'Lexend',
                 letterSpacing: 0.0,
               ),
         ),
@@ -91,7 +90,7 @@ class _AuthForgotPasswordWidgetState extends State<AuthForgotPasswordWidget> {
                     child: Text(
                       'Entrez l\'adresse e-mail associée à votre compte et nous vous enverrons un code de vérification.',
                       style: FlutterFlowTheme.of(context).bodySmall.override(
-                            font: GoogleFonts.lexend(),
+                            fontFamily: 'Lexend',
                             letterSpacing: 0.0,
                           ),
                     ),
@@ -108,12 +107,12 @@ class _AuthForgotPasswordWidgetState extends State<AuthForgotPasswordWidget> {
                 decoration: InputDecoration(
                   labelText: 'Adresse E-mail',
                   labelStyle: FlutterFlowTheme.of(context).bodySmall.override(
-                        font: GoogleFonts.lexend(),
+                        fontFamily: 'Lexend',
                         letterSpacing: 0.0,
                       ),
                   hintText: 'Entrez votre adresse e-mail...',
                   hintStyle: FlutterFlowTheme.of(context).bodySmall.override(
-                        font: GoogleFonts.lexend(),
+                        fontFamily: 'Lexend',
                         letterSpacing: 0.0,
                       ),
                   enabledBorder: OutlineInputBorder(
@@ -150,7 +149,7 @@ class _AuthForgotPasswordWidgetState extends State<AuthForgotPasswordWidget> {
                       const EdgeInsetsDirectional.fromSTEB(20.0, 24.0, 20.0, 24.0),
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      font: GoogleFonts.lexend(),
+                      fontFamily: 'Lexend',
                       letterSpacing: 0.0,
                     ),
                 validator: _model.emailAddressTextControllerValidator
@@ -172,7 +171,7 @@ class _AuthForgotPasswordWidgetState extends State<AuthForgotPasswordWidget> {
                       const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   color: FlutterFlowTheme.of(context).primary,
                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                        font: GoogleFonts.lexend(),
+                        fontFamily: 'Lexend',
                         letterSpacing: 0.0,
                       ),
                   elevation: 3.0,

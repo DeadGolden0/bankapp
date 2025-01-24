@@ -36,6 +36,7 @@ dependencies:
   collection: 1.18.0
   csslib: 0.17.3
   elegant_notification: any
+  equatable: 2.0.5
   file_picker: 8.1.2
   flutter_animate: 4.5.0
   flutter_cache_manager: 3.4.1
@@ -48,6 +49,7 @@ dependencies:
   gotrue: 2.8.4
   hive: 2.2.3
   html: 0.15.4
+  http: 1.2.2
   image_picker: 1.1.2
   image_picker_android: 0.8.12+13
   image_picker_for_web: 3.0.5
@@ -60,6 +62,7 @@ dependencies:
   json_path: 0.7.2
   lottie: 2.7.0
   mime_type: 1.0.0
+  nfc_manager: any
   page_transition: 2.1.0
   path_provider: 2.1.4
   path_provider_android: 2.2.10
@@ -83,7 +86,6 @@ dependencies:
   sign_in_with_apple: 6.1.2
   sign_in_with_apple_platform_interface: 1.1.0
   sign_in_with_apple_web: 2.1.0
-  smooth_page_indicator: 1.1.0
   sqflite: 2.3.3+1
   sqflite_common: 2.5.4+3
   storage_client: 2.0.3

@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'main_home_page_o_l_d_widget.dart' show MainHomePageOLDWidget;
+import 'n_f_c_result_failure_widget.dart' show NFCResultFailureWidget;
 import 'package:flutter/material.dart';
 
-class MainHomePageOLDModel extends FlutterFlowModel<MainHomePageOLDWidget> {
+class NFCResultFailureModel extends FlutterFlowModel<NFCResultFailureWidget> {
   @override
   void initState(BuildContext context) {}
 

@@ -2,7 +2,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'profile_notifications_settings_model.dart';
 export 'profile_notifications_settings_model.dart';
 
@@ -58,7 +57,7 @@ class _ProfileNotificationsSettingsWidgetState
         title: Text(
           'Notifications',
           style: FlutterFlowTheme.of(context).headlineSmall.override(
-                font: GoogleFonts.lexend(),
+                fontFamily: 'Lexend',
                 letterSpacing: 0.0,
               ),
         ),
@@ -89,7 +88,7 @@ class _ProfileNotificationsSettingsWidgetState
                     child: Text(
                       'Choisissez les notifications que vous souhaitez recevoir ci-dessous, et nous mettrons à jour les paramètres.',
                       style: FlutterFlowTheme.of(context).bodySmall.override(
-                            font: GoogleFonts.lexend(),
+                            fontFamily: 'Lexend',
                             letterSpacing: 0.0,
                           ),
                     ),
@@ -109,14 +108,14 @@ class _ProfileNotificationsSettingsWidgetState
                   title: Text(
                     'Push Notifications',
                     style: FlutterFlowTheme.of(context).headlineSmall.override(
-                          font: GoogleFonts.lexend(),
+                          fontFamily: 'Lexend',
                           letterSpacing: 0.0,
                         ),
                   ),
                   subtitle: Text(
                     'Receive Push notifications from our application on a semi regular basis.',
                     style: FlutterFlowTheme.of(context).bodySmall.override(
-                          font: GoogleFonts.lexend(),
+                          fontFamily: 'Lexend',
                           letterSpacing: 0.0,
                         ),
                   ),
@@ -140,14 +139,14 @@ class _ProfileNotificationsSettingsWidgetState
                 title: Text(
                   'Email Notifications',
                   style: FlutterFlowTheme.of(context).headlineSmall.override(
-                        font: GoogleFonts.lexend(),
+                        fontFamily: 'Lexend',
                         letterSpacing: 0.0,
                       ),
                 ),
                 subtitle: Text(
                   'Receive email notifications from our marketing team about new features.',
                   style: FlutterFlowTheme.of(context).bodySmall.override(
-                        font: GoogleFonts.lexend(),
+                        fontFamily: 'Lexend',
                         letterSpacing: 0.0,
                       ),
                 ),
@@ -170,14 +169,14 @@ class _ProfileNotificationsSettingsWidgetState
                 title: Text(
                   'Location Services',
                   style: FlutterFlowTheme.of(context).headlineSmall.override(
-                        font: GoogleFonts.lexend(),
+                        fontFamily: 'Lexend',
                         letterSpacing: 0.0,
                       ),
                 ),
                 subtitle: Text(
                   'Allow us to track your location, this helps keep track of spending and keeps you safe.',
                   style: FlutterFlowTheme.of(context).bodySmall.override(
-                        font: GoogleFonts.lexend(),
+                        fontFamily: 'Lexend',
                         letterSpacing: 0.0,
                       ),
                 ),
@@ -205,7 +204,7 @@ class _ProfileNotificationsSettingsWidgetState
                       const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   color: FlutterFlowTheme.of(context).primary,
                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                        font: GoogleFonts.lexend(),
+                        fontFamily: 'Lexend',
                         color: FlutterFlowTheme.of(context).textColor,
                         letterSpacing: 0.0,
                       ),

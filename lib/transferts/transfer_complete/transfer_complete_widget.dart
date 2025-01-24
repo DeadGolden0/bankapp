@@ -2,7 +2,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'transfer_complete_model.dart';
 export 'transfer_complete_model.dart';
@@ -64,7 +63,7 @@ class _TransferCompleteWidgetState extends State<TransferCompleteWidget> {
               child: Text(
                 'Virement effectué!',
                 style: FlutterFlowTheme.of(context).displaySmall.override(
-                      font: GoogleFonts.lexend(),
+                      fontFamily: 'Lexend',
                       color: FlutterFlowTheme.of(context).textColor,
                       letterSpacing: 0.0,
                     ),
@@ -81,7 +80,7 @@ class _TransferCompleteWidgetState extends State<TransferCompleteWidget> {
                       'Excellent travail, vous avez réussi à transférer des fonds. Cela ne prendra que quelques instants !',
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).bodySmall.override(
-                            font: GoogleFonts.lexend(),
+                            fontFamily: 'Lexend',
                             color: const Color(0xB3FFFFFF),
                             letterSpacing: 0.0,
                           ),
@@ -112,9 +111,9 @@ class _TransferCompleteWidgetState extends State<TransferCompleteWidget> {
                   padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   iconPadding:
                       const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                  color: FlutterFlowTheme.of(context).primary,
+                  color: const Color(0xFF00968A),
                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                        font: GoogleFonts.lexend(),
+                        fontFamily: 'Lexend',
                         color: Colors.white,
                         letterSpacing: 0.0,
                       ),

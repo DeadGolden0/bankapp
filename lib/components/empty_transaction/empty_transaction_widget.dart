@@ -1,7 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'empty_transaction_model.dart';
 export 'empty_transaction_model.dart';
@@ -56,7 +55,7 @@ class _EmptyTransactionWidgetState extends State<EmptyTransactionWidget> {
             'Oups, il semble que vous n\'ayez aucune transactions.',
             textAlign: TextAlign.center,
             style: FlutterFlowTheme.of(context).bodyLarge.override(
-                  font: GoogleFonts.poppins(),
+                  fontFamily: 'Poppins',
                   letterSpacing: 0.0,
                 ),
           ),

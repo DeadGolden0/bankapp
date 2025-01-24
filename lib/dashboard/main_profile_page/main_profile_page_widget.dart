@@ -6,7 +6,6 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'main_profile_page_model.dart';
 export 'main_profile_page_model.dart';
@@ -101,7 +100,7 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget> {
                                     height: 72.0,
                                     decoration: BoxDecoration(
                                       color:
-                                          FlutterFlowTheme.of(context).accent1,
+                                          FlutterFlowTheme.of(context).accent5,
                                       borderRadius: BorderRadius.circular(10.0),
                                       border: Border.all(
                                         color: FlutterFlowTheme.of(context)
@@ -148,7 +147,7 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .headlineSmall
                                                 .override(
-                                                  font: GoogleFonts.lexend(),
+                                                  fontFamily: 'Lexend',
                                                   letterSpacing: 0.0,
                                                 ),
                                           ),
@@ -157,7 +156,7 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .labelMedium
                                                 .override(
-                                                  font: GoogleFonts.poppins(),
+                                                  fontFamily: 'Poppins',
                                                   letterSpacing: 0.0,
                                                 ),
                                           ),
@@ -204,7 +203,7 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
-                                        font: GoogleFonts.poppins(),
+                                        fontFamily: 'Poppins',
                                         letterSpacing: 0.0,
                                       ),
                                 ),
@@ -254,16 +253,17 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget> {
                                                     12.0, 0.0, 0.0, 0.0),
                                             child: Text(
                                               'Informations du compte',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    font: GoogleFonts.lexend(),
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .primaryText,
-                                                    letterSpacing: 0.0,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'Lexend',
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primaryText,
+                                                        letterSpacing: 0.0,
+                                                      ),
                                             ),
                                           ),
                                           Expanded(
@@ -330,13 +330,13 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget> {
                                                     12.0, 0.0, 0.0, 0.0),
                                             child: Text(
                                               'Changer votre mot de passe',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    font: GoogleFonts.lexend(),
-                                                    letterSpacing: 0.0,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'Lexend',
+                                                        letterSpacing: 0.0,
+                                                      ),
                                             ),
                                           ),
                                           Expanded(
@@ -403,13 +403,13 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget> {
                                                     12.0, 0.0, 0.0, 0.0),
                                             child: Text(
                                               'Authentification à deux facteurs',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    font: GoogleFonts.lexend(),
-                                                    letterSpacing: 0.0,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'Lexend',
+                                                        letterSpacing: 0.0,
+                                                      ),
                                             ),
                                           ),
                                           Expanded(
@@ -454,7 +454,7 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
-                                          font: GoogleFonts.poppins(),
+                                          fontFamily: 'Poppins',
                                           letterSpacing: 0.0,
                                         ),
                                   ),
@@ -505,16 +505,17 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget> {
                                                     12.0, 0.0, 0.0, 0.0),
                                             child: Text(
                                               'Language',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    font: GoogleFonts.lexend(),
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .primaryText,
-                                                    letterSpacing: 0.0,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'Lexend',
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primaryText,
+                                                        letterSpacing: 0.0,
+                                                      ),
                                             ),
                                           ),
                                           Expanded(
@@ -593,18 +594,16 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget> {
                                                       12.0, 0.0, 0.0, 0.0),
                                               child: Text(
                                                 'Notifications',
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      font:
-                                                          GoogleFonts.lexend(),
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily: 'Lexend',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
                                                               .primaryText,
-                                                      letterSpacing: 0.0,
-                                                    ),
+                                                          letterSpacing: 0.0,
+                                                        ),
                                               ),
                                             ),
                                             Expanded(
@@ -650,7 +649,7 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
-                                          font: GoogleFonts.poppins(),
+                                          fontFamily: 'Poppins',
                                           letterSpacing: 0.0,
                                         ),
                                   ),
@@ -712,18 +711,16 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget> {
                                                       12.0, 0.0, 0.0, 0.0),
                                               child: Text(
                                                 'Termes et conditions',
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      font:
-                                                          GoogleFonts.lexend(),
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily: 'Lexend',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
                                                               .primaryText,
-                                                      letterSpacing: 0.0,
-                                                    ),
+                                                          letterSpacing: 0.0,
+                                                        ),
                                               ),
                                             ),
                                             Expanded(
@@ -791,16 +788,17 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget> {
                                                     12.0, 0.0, 0.0, 0.0),
                                             child: Text(
                                               'Nous contacter',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    font: GoogleFonts.lexend(),
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .primaryText,
-                                                    letterSpacing: 0.0,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'Lexend',
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primaryText,
+                                                        letterSpacing: 0.0,
+                                                      ),
                                             ),
                                           ),
                                           Expanded(
@@ -867,13 +865,13 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget> {
                                                     12.0, 0.0, 0.0, 0.0),
                                             child: Text(
                                               'Rapport de bug',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    font: GoogleFonts.lexend(),
-                                                    letterSpacing: 0.0,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'Lexend',
+                                                        letterSpacing: 0.0,
+                                                      ),
                                             ),
                                           ),
                                           Expanded(
@@ -995,8 +993,8 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            font: GoogleFonts
-                                                                .lexend(),
+                                                            fontFamily:
+                                                                'Lexend',
                                                             color: Theme.of(context)
                                                                         .brightness ==
                                                                     Brightness
@@ -1083,8 +1081,8 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            font: GoogleFonts
-                                                                .lexend(),
+                                                            fontFamily:
+                                                                'Lexend',
                                                             color: Theme.of(context)
                                                                         .brightness ==
                                                                     Brightness
@@ -1147,7 +1145,7 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget> {
                                     textStyle: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .override(
-                                          font: GoogleFonts.lexend(),
+                                          fontFamily: 'Lexend',
                                           color: FlutterFlowTheme.of(context)
                                               .error,
                                           letterSpacing: 0.0,
@@ -1180,7 +1178,7 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .labelLarge
                                       .override(
-                                        font: GoogleFonts.poppins(),
+                                        fontFamily: 'Poppins',
                                         color: FlutterFlowTheme.of(context)
                                             .primaryText,
                                         letterSpacing: 0.0,
@@ -1195,7 +1193,7 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      font: GoogleFonts.lexend(),
+                                      fontFamily: 'Lexend',
                                       letterSpacing: 0.0,
                                     ),
                               ),

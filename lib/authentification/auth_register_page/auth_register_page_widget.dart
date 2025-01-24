@@ -3,7 +3,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'auth_register_page_model.dart';
 export 'auth_register_page_model.dart';
 
@@ -109,7 +108,7 @@ class _AuthRegisterPageWidgetState extends State<AuthRegisterPageWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .displaySmall
                                         .override(
-                                          font: GoogleFonts.lexend(),
+                                          fontFamily: 'Lexend',
                                           letterSpacing: 0.0,
                                         ),
                                   ),
@@ -127,7 +126,7 @@ class _AuthRegisterPageWidgetState extends State<AuthRegisterPageWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .titleMedium
                                             .override(
-                                              font: GoogleFonts.lexend(),
+                                              fontFamily: 'Lexend',
                                               letterSpacing: 0.0,
                                             ),
                                       ),
@@ -155,7 +154,7 @@ class _AuthRegisterPageWidgetState extends State<AuthRegisterPageWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .bodySmall
                                                   .override(
-                                                    font: GoogleFonts.lexend(),
+                                                    fontFamily: 'Lexend',
                                                     letterSpacing: 0.0,
                                                   ),
                                           hintText:
@@ -164,7 +163,7 @@ class _AuthRegisterPageWidgetState extends State<AuthRegisterPageWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .bodySmall
                                                   .override(
-                                                    font: GoogleFonts.lexend(),
+                                                    fontFamily: 'Lexend',
                                                     letterSpacing: 0.0,
                                                   ),
                                           enabledBorder: OutlineInputBorder(
@@ -219,7 +218,7 @@ class _AuthRegisterPageWidgetState extends State<AuthRegisterPageWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              font: GoogleFonts.lexend(),
+                                              fontFamily: 'Lexend',
                                               letterSpacing: 0.0,
                                             ),
                                         validator: _model
@@ -243,7 +242,7 @@ class _AuthRegisterPageWidgetState extends State<AuthRegisterPageWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .bodySmall
                                                   .override(
-                                                    font: GoogleFonts.lexend(),
+                                                    fontFamily: 'Lexend',
                                                     letterSpacing: 0.0,
                                                   ),
                                           hintText:
@@ -252,7 +251,7 @@ class _AuthRegisterPageWidgetState extends State<AuthRegisterPageWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .bodySmall
                                                   .override(
-                                                    font: GoogleFonts.lexend(),
+                                                    fontFamily: 'Lexend',
                                                     letterSpacing: 0.0,
                                                   ),
                                           enabledBorder: OutlineInputBorder(
@@ -327,7 +326,7 @@ class _AuthRegisterPageWidgetState extends State<AuthRegisterPageWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              font: GoogleFonts.lexend(),
+                                              fontFamily: 'Lexend',
                                               letterSpacing: 0.0,
                                             ),
                                         validator: _model
@@ -351,7 +350,7 @@ class _AuthRegisterPageWidgetState extends State<AuthRegisterPageWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .bodySmall
                                                   .override(
-                                                    font: GoogleFonts.lexend(),
+                                                    fontFamily: 'Lexend',
                                                     letterSpacing: 0.0,
                                                   ),
                                           hintText:
@@ -360,7 +359,7 @@ class _AuthRegisterPageWidgetState extends State<AuthRegisterPageWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .bodySmall
                                                   .override(
-                                                    font: GoogleFonts.lexend(),
+                                                    fontFamily: 'Lexend',
                                                     letterSpacing: 0.0,
                                                   ),
                                           enabledBorder: OutlineInputBorder(
@@ -435,7 +434,7 @@ class _AuthRegisterPageWidgetState extends State<AuthRegisterPageWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              font: GoogleFonts.lexend(),
+                                              fontFamily: 'Lexend',
                                               letterSpacing: 0.0,
                                             ),
                                         validator: _model
@@ -526,7 +525,7 @@ class _AuthRegisterPageWidgetState extends State<AuthRegisterPageWidget> {
                                     textStyle: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .override(
-                                          font: GoogleFonts.lexend(),
+                                          fontFamily: 'Lexend',
                                           letterSpacing: 0.0,
                                         ),
                                     elevation: 3.0,
@@ -582,14 +581,13 @@ class _AuthRegisterPageWidgetState extends State<AuthRegisterPageWidget> {
                                             children: [
                                               Text(
                                                 'Déjà client ?',
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      font:
-                                                          GoogleFonts.lexend(),
-                                                      letterSpacing: 0.0,
-                                                    ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily: 'Lexend',
+                                                          letterSpacing: 0.0,
+                                                        ),
                                               ),
                                               Padding(
                                                 padding: const EdgeInsetsDirectional
@@ -601,8 +599,7 @@ class _AuthRegisterPageWidgetState extends State<AuthRegisterPageWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        font: GoogleFonts
-                                                            .lexend(),
+                                                        fontFamily: 'Lexend',
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)

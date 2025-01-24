@@ -3,7 +3,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'transfer_amount_model.dart';
 export 'transfer_amount_model.dart';
@@ -75,7 +74,7 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .headlineMedium
                                   .override(
-                                    font: GoogleFonts.lexend(),
+                                    fontFamily: 'Lexend',
                                     letterSpacing: 0.0,
                                   ),
                             ),
@@ -90,7 +89,7 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .labelMedium
                                     .override(
-                                      font: GoogleFonts.poppins(),
+                                      fontFamily: 'Poppins',
                                       letterSpacing: 0.0,
                                     ),
                               ),
@@ -112,7 +111,7 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
-                                            font: GoogleFonts.poppins(),
+                                            fontFamily: 'Poppins',
                                             letterSpacing: 0.0,
                                           ),
                                     ),
@@ -175,8 +174,8 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                                                                   context)
                                                               .labelLarge
                                                               .override(
-                                                                font: GoogleFonts
-                                                                    .poppins(),
+                                                                fontFamily:
+                                                                    'Poppins',
                                                                 letterSpacing:
                                                                     0.0,
                                                               ),
@@ -187,8 +186,8 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                                                                   context)
                                                               .labelMedium
                                                               .override(
-                                                                font: GoogleFonts
-                                                                    .poppins(),
+                                                                fontFamily:
+                                                                    'Poppins',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryText,
@@ -254,8 +253,7 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                                                             context)
                                                         .bodyMedium
                                                         .override(
-                                                          font: GoogleFonts
-                                                              .lexend(),
+                                                          fontFamily: 'Lexend',
                                                           letterSpacing: 0.0,
                                                         ),
                                                     keyboardType:
@@ -311,8 +309,8 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                                                                   context)
                                                               .labelLarge
                                                               .override(
-                                                                font: GoogleFonts
-                                                                    .poppins(),
+                                                                fontFamily:
+                                                                    'Poppins',
                                                                 letterSpacing:
                                                                     0.0,
                                                               ),
@@ -323,8 +321,8 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                                                                   context)
                                                               .labelMedium
                                                               .override(
-                                                                font: GoogleFonts
-                                                                    .poppins(),
+                                                                fontFamily:
+                                                                    'Poppins',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryText,
@@ -390,8 +388,7 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                                                             context)
                                                         .bodyMedium
                                                         .override(
-                                                          font: GoogleFonts
-                                                              .lexend(),
+                                                          fontFamily: 'Lexend',
                                                           letterSpacing: 0.0,
                                                         ),
                                                     maxLines: 5,
@@ -442,8 +439,7 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                                                             .of(context)
                                                         .titleLarge
                                                         .override(
-                                                          font: GoogleFonts
-                                                              .poppins(),
+                                                          fontFamily: 'Poppins',
                                                           fontSize: 18.0,
                                                           letterSpacing: 0.0,
                                                         ),
@@ -538,8 +534,7 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
                                                             .of(context)
                                                         .titleMedium
                                                         .override(
-                                                          font: GoogleFonts
-                                                              .lexend(),
+                                                          fontFamily: 'Lexend',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .textColor,

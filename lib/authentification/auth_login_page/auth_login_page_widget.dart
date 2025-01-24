@@ -4,7 +4,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'auth_login_page_model.dart';
 export 'auth_login_page_model.dart';
 
@@ -106,7 +105,7 @@ class _AuthLoginPageWidgetState extends State<AuthLoginPageWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .displaySmall
                                         .override(
-                                          font: GoogleFonts.lexend(),
+                                          fontFamily: 'Lexend',
                                           letterSpacing: 0.0,
                                         ),
                                   ),
@@ -124,7 +123,7 @@ class _AuthLoginPageWidgetState extends State<AuthLoginPageWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .titleMedium
                                             .override(
-                                              font: GoogleFonts.lexend(),
+                                              fontFamily: 'Lexend',
                                               letterSpacing: 0.0,
                                             ),
                                       ),
@@ -153,7 +152,7 @@ class _AuthLoginPageWidgetState extends State<AuthLoginPageWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .bodySmall
                                                   .override(
-                                                    font: GoogleFonts.lexend(),
+                                                    fontFamily: 'Lexend',
                                                     letterSpacing: 0.0,
                                                   ),
                                           hintText:
@@ -162,7 +161,7 @@ class _AuthLoginPageWidgetState extends State<AuthLoginPageWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .bodySmall
                                                   .override(
-                                                    font: GoogleFonts.lexend(),
+                                                    fontFamily: 'Lexend',
                                                     letterSpacing: 0.0,
                                                   ),
                                           enabledBorder: OutlineInputBorder(
@@ -217,7 +216,7 @@ class _AuthLoginPageWidgetState extends State<AuthLoginPageWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              font: GoogleFonts.lexend(),
+                                              fontFamily: 'Lexend',
                                               letterSpacing: 0.0,
                                             ),
                                         validator: _model
@@ -241,7 +240,7 @@ class _AuthLoginPageWidgetState extends State<AuthLoginPageWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .bodySmall
                                                   .override(
-                                                    font: GoogleFonts.lexend(),
+                                                    fontFamily: 'Lexend',
                                                     letterSpacing: 0.0,
                                                   ),
                                           hintText:
@@ -250,7 +249,7 @@ class _AuthLoginPageWidgetState extends State<AuthLoginPageWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .bodySmall
                                                   .override(
-                                                    font: GoogleFonts.lexend(),
+                                                    fontFamily: 'Lexend',
                                                     letterSpacing: 0.0,
                                                   ),
                                           enabledBorder: OutlineInputBorder(
@@ -323,7 +322,7 @@ class _AuthLoginPageWidgetState extends State<AuthLoginPageWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              font: GoogleFonts.lexend(),
+                                              fontFamily: 'Lexend',
                                               letterSpacing: 0.0,
                                             ),
                                         validator: _model
@@ -360,7 +359,7 @@ class _AuthLoginPageWidgetState extends State<AuthLoginPageWidget> {
                                         textStyle: FlutterFlowTheme.of(context)
                                             .bodySmall
                                             .override(
-                                              font: GoogleFonts.lexend(),
+                                              fontFamily: 'Lexend',
                                               letterSpacing: 0.0,
                                             ),
                                         elevation: 0.0,
@@ -449,7 +448,7 @@ class _AuthLoginPageWidgetState extends State<AuthLoginPageWidget> {
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(
-                                            font: GoogleFonts.lexend(),
+                                            fontFamily: 'Lexend',
                                             letterSpacing: 0.0,
                                           ),
                                       elevation: 3.0,
@@ -502,8 +501,7 @@ class _AuthLoginPageWidgetState extends State<AuthLoginPageWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        font: GoogleFonts
-                                                            .lexend(),
+                                                        fontFamily: 'Lexend',
                                                         letterSpacing: 0.0,
                                                       ),
                                                 ),
@@ -517,8 +515,7 @@ class _AuthLoginPageWidgetState extends State<AuthLoginPageWidget> {
                                                             context)
                                                         .bodyMedium
                                                         .override(
-                                                          font: GoogleFonts
-                                                              .lexend(),
+                                                          fontFamily: 'Lexend',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .primary,

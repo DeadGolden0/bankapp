@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'payment_details_widget.dart' show PaymentDetailsWidget;
+import 'n_f_c_error_widget.dart' show NFCErrorWidget;
 import 'package:flutter/material.dart';
 
-class PaymentDetailsModel extends FlutterFlowModel<PaymentDetailsWidget> {
+class NFCErrorModel extends FlutterFlowModel<NFCErrorWidget> {
   @override
   void initState(BuildContext context) {}
 

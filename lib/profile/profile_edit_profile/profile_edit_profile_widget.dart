@@ -2,7 +2,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'profile_edit_profile_model.dart';
 export 'profile_edit_profile_model.dart';
 
@@ -69,7 +68,7 @@ class _ProfileEditProfileWidgetState extends State<ProfileEditProfileWidget> {
         title: Text(
           'Edit Profile',
           style: FlutterFlowTheme.of(context).headlineSmall.override(
-                font: GoogleFonts.lexend(),
+                fontFamily: 'Lexend',
                 letterSpacing: 0.0,
               ),
         ),
@@ -126,7 +125,7 @@ class _ProfileEditProfileWidgetState extends State<ProfileEditProfileWidget> {
                         const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).secondaryBackground,
                     textStyle: FlutterFlowTheme.of(context).bodySmall.override(
-                          font: GoogleFonts.lexend(),
+                          fontFamily: 'Lexend',
                           letterSpacing: 0.0,
                         ),
                     elevation: 0.0,
@@ -147,12 +146,12 @@ class _ProfileEditProfileWidgetState extends State<ProfileEditProfileWidget> {
                   decoration: InputDecoration(
                     labelText: 'Your Name',
                     labelStyle: FlutterFlowTheme.of(context).bodySmall.override(
-                          font: GoogleFonts.lexend(),
+                          fontFamily: 'Lexend',
                           letterSpacing: 0.0,
                         ),
                     hintText: 'Please enter a valid number...',
                     hintStyle: FlutterFlowTheme.of(context).bodySmall.override(
-                          font: GoogleFonts.lexend(),
+                          fontFamily: 'Lexend',
                           letterSpacing: 0.0,
                         ),
                     enabledBorder: OutlineInputBorder(
@@ -189,7 +188,7 @@ class _ProfileEditProfileWidgetState extends State<ProfileEditProfileWidget> {
                         const EdgeInsetsDirectional.fromSTEB(20.0, 24.0, 20.0, 24.0),
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        font: GoogleFonts.lexend(),
+                        fontFamily: 'Lexend',
                         letterSpacing: 0.0,
                       ),
                   validator: _model.yourNameTextControllerValidator
@@ -205,12 +204,12 @@ class _ProfileEditProfileWidgetState extends State<ProfileEditProfileWidget> {
                   decoration: InputDecoration(
                     labelText: 'Email Address',
                     labelStyle: FlutterFlowTheme.of(context).bodySmall.override(
-                          font: GoogleFonts.lexend(),
+                          fontFamily: 'Lexend',
                           letterSpacing: 0.0,
                         ),
                     hintText: 'Your email',
                     hintStyle: FlutterFlowTheme.of(context).bodySmall.override(
-                          font: GoogleFonts.lexend(),
+                          fontFamily: 'Lexend',
                           letterSpacing: 0.0,
                         ),
                     enabledBorder: OutlineInputBorder(
@@ -247,7 +246,7 @@ class _ProfileEditProfileWidgetState extends State<ProfileEditProfileWidget> {
                         const EdgeInsetsDirectional.fromSTEB(20.0, 24.0, 20.0, 24.0),
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        font: GoogleFonts.lexend(),
+                        fontFamily: 'Lexend',
                         letterSpacing: 0.0,
                       ),
                   keyboardType: TextInputType.emailAddress,
@@ -264,12 +263,12 @@ class _ProfileEditProfileWidgetState extends State<ProfileEditProfileWidget> {
                   decoration: InputDecoration(
                     labelText: 'Your Age',
                     labelStyle: FlutterFlowTheme.of(context).bodySmall.override(
-                          font: GoogleFonts.lexend(),
+                          fontFamily: 'Lexend',
                           letterSpacing: 0.0,
                         ),
                     hintText: 'i.e. 34',
                     hintStyle: FlutterFlowTheme.of(context).bodySmall.override(
-                          font: GoogleFonts.lexend(),
+                          fontFamily: 'Lexend',
                           letterSpacing: 0.0,
                         ),
                     enabledBorder: OutlineInputBorder(
@@ -306,7 +305,7 @@ class _ProfileEditProfileWidgetState extends State<ProfileEditProfileWidget> {
                         const EdgeInsetsDirectional.fromSTEB(20.0, 24.0, 20.0, 24.0),
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        font: GoogleFonts.lexend(),
+                        fontFamily: 'Lexend',
                         letterSpacing: 0.0,
                       ),
                   keyboardType: TextInputType.number,
@@ -323,11 +322,11 @@ class _ProfileEditProfileWidgetState extends State<ProfileEditProfileWidget> {
                   decoration: InputDecoration(
                     labelText: 'Your Title',
                     labelStyle: FlutterFlowTheme.of(context).bodySmall.override(
-                          font: GoogleFonts.lexend(),
+                          fontFamily: 'Lexend',
                           letterSpacing: 0.0,
                         ),
                     hintStyle: FlutterFlowTheme.of(context).bodySmall.override(
-                          font: GoogleFonts.lexend(),
+                          fontFamily: 'Lexend',
                           letterSpacing: 0.0,
                         ),
                     enabledBorder: OutlineInputBorder(
@@ -364,7 +363,7 @@ class _ProfileEditProfileWidgetState extends State<ProfileEditProfileWidget> {
                         const EdgeInsetsDirectional.fromSTEB(20.0, 24.0, 20.0, 24.0),
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        font: GoogleFonts.lexend(),
+                        fontFamily: 'Lexend',
                         letterSpacing: 0.0,
                       ),
                   validator: _model.yourTitleTextControllerValidator
@@ -386,7 +385,7 @@ class _ProfileEditProfileWidgetState extends State<ProfileEditProfileWidget> {
                         const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).primary,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                          font: GoogleFonts.lexend(),
+                          fontFamily: 'Lexend',
                           color: FlutterFlowTheme.of(context).textColor,
                           letterSpacing: 0.0,
                         ),
