@@ -6,7 +6,6 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 import 'transfer_iban_model.dart';
@@ -85,7 +84,7 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .headlineMedium
                                   .override(
-                                    font: GoogleFonts.lexend(),
+                                    fontFamily: 'Lexend',
                                     letterSpacing: 0.0,
                                   ),
                             ),
@@ -100,7 +99,7 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .labelMedium
                                     .override(
-                                      font: GoogleFonts.poppins(),
+                                      fontFamily: 'Poppins',
                                       letterSpacing: 0.0,
                                     ),
                               ),
@@ -122,7 +121,7 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
-                                            font: GoogleFonts.poppins(),
+                                            fontFamily: 'Poppins',
                                             letterSpacing: 0.0,
                                           ),
                                     ),
@@ -254,8 +253,8 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                                                   .of(context)
                                                               .bodyMedium
                                                               .override(
-                                                                font: GoogleFonts
-                                                                    .lexend(),
+                                                                fontFamily:
+                                                                    'Lexend',
                                                                 fontSize: 16.0,
                                                                 letterSpacing:
                                                                     0.0,
@@ -269,8 +268,8 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                                                   .of(context)
                                                               .bodySmall
                                                               .override(
-                                                                font: GoogleFonts
-                                                                    .lexend(),
+                                                                fontFamily:
+                                                                    'Lexend',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .primary,
@@ -316,16 +315,14 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryBackground,
-                                                  textStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .titleLarge
-                                                          .override(
-                                                            font: GoogleFonts
-                                                                .poppins(),
-                                                            fontSize: 18.0,
-                                                            letterSpacing: 0.0,
-                                                          ),
+                                                  textStyle: FlutterFlowTheme
+                                                          .of(context)
+                                                      .titleLarge
+                                                      .override(
+                                                        fontFamily: 'Poppins',
+                                                        fontSize: 18.0,
+                                                        letterSpacing: 0.0,
+                                                      ),
                                                   elevation: 0.0,
                                                   borderSide: BorderSide(
                                                     color: FlutterFlowTheme.of(
@@ -391,7 +388,7 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                                         ),
                                                         'transfertDataParam':
                                                             serializeParam(
-                                                          TransfertDataStruct(
+                                                          TransferHistoryStruct(
                                                             transferAmount:
                                                                 widget
                                                                     .tempAmount
@@ -444,8 +441,7 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                                           .of(context)
                                                       .titleMedium
                                                       .override(
-                                                        font: GoogleFonts
-                                                            .lexend(),
+                                                        fontFamily: 'Lexend',
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -526,8 +522,8 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                                                     context)
                                                                 .labelMedium
                                                                 .override(
-                                                                  font: GoogleFonts
-                                                                      .poppins(),
+                                                                  fontFamily:
+                                                                      'Poppins',
                                                                   letterSpacing:
                                                                       0.0,
                                                                 ),
@@ -538,8 +534,8 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                                                     context)
                                                                 .labelMedium
                                                                 .override(
-                                                                  font: GoogleFonts
-                                                                      .poppins(),
+                                                                  fontFamily:
+                                                                      'Poppins',
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .secondaryText,
@@ -614,8 +610,8 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
-                                                            font: GoogleFonts
-                                                                .lexend(),
+                                                            fontFamily:
+                                                                'Lexend',
                                                             letterSpacing: 0.0,
                                                           ),
                                                       keyboardType:
@@ -664,16 +660,14 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryBackground,
-                                                  textStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .titleLarge
-                                                          .override(
-                                                            font: GoogleFonts
-                                                                .poppins(),
-                                                            fontSize: 18.0,
-                                                            letterSpacing: 0.0,
-                                                          ),
+                                                  textStyle: FlutterFlowTheme
+                                                          .of(context)
+                                                      .titleLarge
+                                                      .override(
+                                                        fontFamily: 'Poppins',
+                                                        fontSize: 18.0,
+                                                        letterSpacing: 0.0,
+                                                      ),
                                                   elevation: 0.0,
                                                   borderSide: BorderSide(
                                                     color: FlutterFlowTheme.of(
@@ -804,8 +798,7 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                                                           .of(context)
                                                       .titleMedium
                                                       .override(
-                                                        font: GoogleFonts
-                                                            .lexend(),
+                                                        fontFamily: 'Lexend',
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -852,6 +845,17 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
                     ),
                   ],
                 ),
+              ),
+              Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                child: SelectionArea(
+                    child: Text(
+                  'IBAN DE TEST :\n\n1 : FR000180844530713178\n2 : FR000139523306500187',
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        fontFamily: 'Lexend',
+                        letterSpacing: 0.0,
+                      ),
+                )),
               ),
             ],
           ),

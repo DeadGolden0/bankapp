@@ -2,7 +2,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'transfer_error_model.dart';
 export 'transfer_error_model.dart';
@@ -69,7 +68,7 @@ class _TransferErrorWidgetState extends State<TransferErrorWidget> {
               child: Text(
                 'Virement échoué!',
                 style: FlutterFlowTheme.of(context).displaySmall.override(
-                      font: GoogleFonts.lexend(),
+                      fontFamily: 'Lexend',
                       color: FlutterFlowTheme.of(context).textColor,
                       letterSpacing: 0.0,
                     ),
@@ -86,7 +85,7 @@ class _TransferErrorWidgetState extends State<TransferErrorWidget> {
                       'Il semblerait qu\'une erreur soit survenue lors du virement.',
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).bodySmall.override(
-                            font: GoogleFonts.lexend(),
+                            fontFamily: 'Lexend',
                             color: const Color(0xB3FFFFFF),
                             letterSpacing: 0.0,
                           ),
@@ -109,7 +108,7 @@ class _TransferErrorWidgetState extends State<TransferErrorWidget> {
                       ),
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).bodySmall.override(
-                            font: GoogleFonts.lexend(),
+                            fontFamily: 'Lexend',
                             color: const Color(0xB3FFFFFF),
                             letterSpacing: 0.0,
                           ),
@@ -142,7 +141,7 @@ class _TransferErrorWidgetState extends State<TransferErrorWidget> {
                       const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   color: FlutterFlowTheme.of(context).secondary,
                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                        font: GoogleFonts.lexend(),
+                        fontFamily: 'Lexend',
                         color: Colors.white,
                         letterSpacing: 0.0,
                       ),

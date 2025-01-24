@@ -6,7 +6,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 import 'transfer_recap_model.dart';
@@ -20,7 +19,7 @@ class TransferRecapWidget extends StatefulWidget {
   });
 
   final RecipientDataStruct? recipientDataParam;
-  final TransfertDataStruct? transfertDataParam;
+  final TransferHistoryStruct? transfertDataParam;
 
   @override
   State<TransferRecapWidget> createState() => _TransferRecapWidgetState();
@@ -79,7 +78,7 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                           style: FlutterFlowTheme.of(context)
                               .headlineMedium
                               .override(
-                                font: GoogleFonts.lexend(),
+                                fontFamily: 'Lexend',
                                 letterSpacing: 0.0,
                               ),
                         ),
@@ -94,7 +93,7 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
-                                  font: GoogleFonts.poppins(),
+                                  fontFamily: 'Poppins',
                                   letterSpacing: 0.0,
                                 ),
                           ),
@@ -116,7 +115,7 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
-                                        font: GoogleFonts.poppins(),
+                                        fontFamily: 'Poppins',
                                         letterSpacing: 0.0,
                                       ),
                                 ),
@@ -169,7 +168,7 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
-                                          font: GoogleFonts.poppins(),
+                                          fontFamily: 'Poppins',
                                           letterSpacing: 0.0,
                                         ),
                                   ),
@@ -185,7 +184,7 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .headlineMedium
                                         .override(
-                                          font: GoogleFonts.lexend(),
+                                          fontFamily: 'Lexend',
                                           letterSpacing: 0.0,
                                         ),
                                   ),
@@ -207,7 +206,7 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
-                                              font: GoogleFonts.poppins(),
+                                              fontFamily: 'Poppins',
                                               letterSpacing: 0.0,
                                             ),
                                       ),
@@ -221,7 +220,7 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .headlineSmall
                                             .override(
-                                              font: GoogleFonts.lexend(),
+                                              fontFamily: 'Lexend',
                                               letterSpacing: 0.0,
                                             ),
                                       ),
@@ -235,7 +234,7 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
-                                              font: GoogleFonts.poppins(),
+                                              fontFamily: 'Poppins',
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .primary,
@@ -400,7 +399,7 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                             textStyle: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  font: GoogleFonts.lexend(),
+                                  fontFamily: 'Lexend',
                                   letterSpacing: 0.0,
                                 ),
                             elevation: 0.0,
@@ -509,7 +508,7 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                             textStyle: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(
-                                  font: GoogleFonts.lexend(),
+                                  fontFamily: 'Lexend',
                                   letterSpacing: 0.0,
                                 ),
                             elevation: 3.0,

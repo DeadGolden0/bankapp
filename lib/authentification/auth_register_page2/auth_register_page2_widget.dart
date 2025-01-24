@@ -7,7 +7,6 @@ import '/flutter_flow/instant_timer.dart';
 import '/flutter_flow/upload_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'auth_register_page2_model.dart';
 export 'auth_register_page2_model.dart';
 
@@ -69,7 +68,7 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
         title: Text(
           'Création de compte',
           style: FlutterFlowTheme.of(context).headlineSmall.override(
-                font: GoogleFonts.lexend(),
+                fontFamily: 'Lexend',
                 letterSpacing: 0.0,
               ),
         ),
@@ -214,7 +213,7 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                       color: FlutterFlowTheme.of(context).secondaryBackground,
                       textStyle:
                           FlutterFlowTheme.of(context).bodySmall.override(
-                                font: GoogleFonts.lexend(),
+                                fontFamily: 'Lexend',
                                 letterSpacing: 0.0,
                               ),
                       elevation: 0.0,
@@ -243,13 +242,13 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                             labelText: 'Prénom',
                             labelStyle:
                                 FlutterFlowTheme.of(context).bodySmall.override(
-                                      font: GoogleFonts.lexend(),
+                                      fontFamily: 'Lexend',
                                       letterSpacing: 0.0,
                                     ),
                             hintText: 'Votre Prénom',
                             hintStyle:
                                 FlutterFlowTheme.of(context).bodySmall.override(
-                                      font: GoogleFonts.lexend(),
+                                      fontFamily: 'Lexend',
                                       letterSpacing: 0.0,
                                     ),
                             enabledBorder: OutlineInputBorder(
@@ -288,7 +287,7 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                           ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.lexend(),
+                                    fontFamily: 'Lexend',
                                     letterSpacing: 0.0,
                                   ),
                           keyboardType: TextInputType.emailAddress,
@@ -307,13 +306,13 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                             labelText: 'Nom',
                             labelStyle:
                                 FlutterFlowTheme.of(context).bodySmall.override(
-                                      font: GoogleFonts.lexend(),
+                                      fontFamily: 'Lexend',
                                       letterSpacing: 0.0,
                                     ),
                             hintText: 'Votre Nom',
                             hintStyle:
                                 FlutterFlowTheme.of(context).bodySmall.override(
-                                      font: GoogleFonts.lexend(),
+                                      fontFamily: 'Lexend',
                                       letterSpacing: 0.0,
                                     ),
                             enabledBorder: OutlineInputBorder(
@@ -352,7 +351,7 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                           ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.lexend(),
+                                    fontFamily: 'Lexend',
                                     letterSpacing: 0.0,
                                   ),
                           validator: _model.lastNameTextControllerValidator
@@ -370,13 +369,13 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                             labelText: 'Addresse',
                             labelStyle:
                                 FlutterFlowTheme.of(context).bodySmall.override(
-                                      font: GoogleFonts.lexend(),
+                                      fontFamily: 'Lexend',
                                       letterSpacing: 0.0,
                                     ),
                             hintText: 'Votre addresse',
                             hintStyle:
                                 FlutterFlowTheme.of(context).bodySmall.override(
-                                      font: GoogleFonts.lexend(),
+                                      fontFamily: 'Lexend',
                                       letterSpacing: 0.0,
                                     ),
                             enabledBorder: OutlineInputBorder(
@@ -415,7 +414,7 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                           ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.lexend(),
+                                    fontFamily: 'Lexend',
                                     letterSpacing: 0.0,
                                   ),
                           validator: _model.addressTextControllerValidator
@@ -433,13 +432,13 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                             labelText: 'Téléphone',
                             labelStyle:
                                 FlutterFlowTheme.of(context).bodySmall.override(
-                                      font: GoogleFonts.lexend(),
+                                      fontFamily: 'Lexend',
                                       letterSpacing: 0.0,
                                     ),
                             hintText: 'Votre numéro de téléphone',
                             hintStyle:
                                 FlutterFlowTheme.of(context).bodySmall.override(
-                                      font: GoogleFonts.lexend(),
+                                      fontFamily: 'Lexend',
                                       letterSpacing: 0.0,
                                     ),
                             enabledBorder: OutlineInputBorder(
@@ -478,7 +477,7 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                           ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.lexend(),
+                                    fontFamily: 'Lexend',
                                     letterSpacing: 0.0,
                                   ),
                           maxLength: 10,
@@ -667,7 +666,7 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                             textStyle: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(
-                                  font: GoogleFonts.lexend(),
+                                  fontFamily: 'Lexend',
                                   color: FlutterFlowTheme.of(context).textColor,
                                   letterSpacing: 0.0,
                                 ),

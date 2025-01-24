@@ -5,11 +5,8 @@ export '/authentification/auth_register_page/auth_register_page_widget.dart'
     show AuthRegisterPageWidget;
 export '/authentification/auth_forgot_password/auth_forgot_password_widget.dart'
     show AuthForgotPasswordWidget;
-export '/pages/onboarding/onboarding_widget.dart' show OnboardingWidget;
 export '/dashboard/main_cards_page/main_cards_page_widget.dart'
     show MainCardsPageWidget;
-export '/pages/payment_details/payment_details_widget.dart'
-    show PaymentDetailsWidget;
 export '/dashboard/main_profile_page/main_profile_page_widget.dart'
     show MainProfilePageWidget;
 export '/transferts/transfer_complete/transfer_complete_widget.dart'
@@ -22,12 +19,8 @@ export '/profile/profile_notifications_settings/profile_notifications_settings_w
     show ProfileNotificationsSettingsWidget;
 export '/profile/profile_privacy_policy/profile_privacy_policy_widget.dart'
     show ProfilePrivacyPolicyWidget;
-export '/pages/tutorial_p_r_o_f_i_l_e/tutorial_p_r_o_f_i_l_e_widget.dart'
-    show TutorialPROFILEWidget;
 export '/authentification/auth_register_page2/auth_register_page2_widget.dart'
     show AuthRegisterPage2Widget;
-export '/dashboard/main_home_page_o_l_d/main_home_page_o_l_d_widget.dart'
-    show MainHomePageOLDWidget;
 export '/dashboard/main_home_page/main_home_page_widget.dart'
     show MainHomePageWidget;
 export '/transferts/transfer_iban/transfer_iban_widget.dart'
@@ -38,3 +31,9 @@ export '/transferts/transfer_recap/transfer_recap_widget.dart'
     show TransferRecapWidget;
 export '/transferts/transfer_error/transfer_error_widget.dart'
     show TransferErrorWidget;
+export '/nfc/n_f_c_scan/n_f_c_scan_widget.dart' show NFCScanWidget;
+export '/nfc/n_f_c_error/n_f_c_error_widget.dart' show NFCErrorWidget;
+export '/nfc/n_f_c_result_failure/n_f_c_result_failure_widget.dart'
+    show NFCResultFailureWidget;
+export '/nfc/n_f_c_result_success/n_f_c_result_success_widget.dart'
+    show NFCResultSuccessWidget;

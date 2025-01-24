@@ -1,8 +1,9 @@
+import '/auth/supabase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'pause_card_model.dart';
 export 'pause_card_model.dart';
 
@@ -52,9 +53,9 @@ class _PauseCardWidgetState extends State<PauseCardWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Text(
-                  'Pause Card',
+                  'Carte en pause?',
                   style: FlutterFlowTheme.of(context).displaySmall.override(
-                        font: GoogleFonts.lexend(),
+                        fontFamily: 'Lexend',
                         letterSpacing: 0.0,
                       ),
                 ),
@@ -67,9 +68,9 @@ class _PauseCardWidgetState extends State<PauseCardWidget> {
                 children: [
                   Expanded(
                     child: Text(
-                      'Are you sure you want to pause your card?',
+                      'Êtes-vous sûr(e) de vouloir mettre votre carte en pause ?',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            font: GoogleFonts.lexend(),
+                            fontFamily: 'Lexend',
                             letterSpacing: 0.0,
                           ),
                     ),
@@ -87,7 +88,7 @@ class _PauseCardWidgetState extends State<PauseCardWidget> {
                     onPressed: () async {
                       context.pop();
                     },
-                    text: 'Nevermind',
+                    text: 'Retour',
                     options: FFButtonOptions(
                       width: 150.0,
                       height: 50.0,
@@ -98,7 +99,7 @@ class _PauseCardWidgetState extends State<PauseCardWidget> {
                       color: FlutterFlowTheme.of(context).primaryBackground,
                       textStyle:
                           FlutterFlowTheme.of(context).bodySmall.override(
-                                font: GoogleFonts.lexend(),
+                                fontFamily: 'Lexend',
                                 color: FlutterFlowTheme.of(context).primaryText,
                                 letterSpacing: 0.0,
                               ),
@@ -112,9 +113,18 @@ class _PauseCardWidgetState extends State<PauseCardWidget> {
                   ),
                   FFButtonWidget(
                     onPressed: () async {
-                      context.pop();
+                      _model.toggleCardOutput = await actions.toggleCard(
+                        currentUserUid,
+                      );
+                      await actions.showToastNotification(
+                        context,
+                        _model.toggleCardOutput?.status,
+                        _model.toggleCardOutput!.message,
+                      );
+
+                      safeSetState(() {});
                     },
-                    text: 'Yes, Pause',
+                    text: 'Continuer',
                     options: FFButtonOptions(
                       width: 150.0,
                       height: 50.0,
@@ -125,7 +135,7 @@ class _PauseCardWidgetState extends State<PauseCardWidget> {
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
-                                font: GoogleFonts.lexend(),
+                                fontFamily: 'Lexend',
                                 color: Colors.white,
                                 letterSpacing: 0.0,
                               ),

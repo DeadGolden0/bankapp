@@ -2,7 +2,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'profile_change_password_model.dart';
 export 'profile_change_password_model.dart';
 
@@ -61,7 +60,7 @@ class _ProfileChangePasswordWidgetState
         title: Text(
           'Change Password',
           style: FlutterFlowTheme.of(context).headlineSmall.override(
-                font: GoogleFonts.lexend(),
+                fontFamily: 'Lexend',
                 letterSpacing: 0.0,
               ),
         ),
@@ -92,7 +91,7 @@ class _ProfileChangePasswordWidgetState
                     child: Text(
                       'Enter the email associated with your account and we will send you link to reset your password.',
                       style: FlutterFlowTheme.of(context).bodySmall.override(
-                            font: GoogleFonts.lexend(),
+                            fontFamily: 'Lexend',
                             letterSpacing: 0.0,
                           ),
                     ),
@@ -109,12 +108,12 @@ class _ProfileChangePasswordWidgetState
                 decoration: InputDecoration(
                   labelText: 'Email Address',
                   labelStyle: FlutterFlowTheme.of(context).bodySmall.override(
-                        font: GoogleFonts.lexend(),
+                        fontFamily: 'Lexend',
                         letterSpacing: 0.0,
                       ),
                   hintText: 'Enter your email...',
                   hintStyle: FlutterFlowTheme.of(context).bodySmall.override(
-                        font: GoogleFonts.lexend(),
+                        fontFamily: 'Lexend',
                         letterSpacing: 0.0,
                       ),
                   enabledBorder: OutlineInputBorder(
@@ -151,7 +150,7 @@ class _ProfileChangePasswordWidgetState
                       const EdgeInsetsDirectional.fromSTEB(20.0, 24.0, 20.0, 24.0),
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      font: GoogleFonts.lexend(),
+                      fontFamily: 'Lexend',
                       letterSpacing: 0.0,
                     ),
                 validator: _model.emailAddressTextControllerValidator
@@ -173,7 +172,7 @@ class _ProfileChangePasswordWidgetState
                       const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   color: FlutterFlowTheme.of(context).primary,
                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                        font: GoogleFonts.lexend(),
+                        fontFamily: 'Lexend',
                         color: FlutterFlowTheme.of(context).textColor,
                         letterSpacing: 0.0,
                       ),

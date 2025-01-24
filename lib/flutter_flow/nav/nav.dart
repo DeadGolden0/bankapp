@@ -103,21 +103,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const AuthForgotPasswordWidget(),
         ),
         FFRoute(
-          name: 'onboarding',
-          path: '/onboarding',
-          builder: (context, params) => const OnboardingWidget(),
-        ),
-        FFRoute(
           name: 'main_cardsPage',
           path: '/mainCardsPage',
           builder: (context, params) => params.isEmpty
               ? const NavBarPage(initialPage: 'main_cardsPage')
               : const MainCardsPageWidget(),
-        ),
-        FFRoute(
-          name: 'paymentDetails',
-          path: '/paymentDetails',
-          builder: (context, params) => const PaymentDetailsWidget(),
         ),
         FFRoute(
           name: 'main_profilePage',
@@ -152,11 +142,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const ProfilePrivacyPolicyWidget(),
         ),
         FFRoute(
-          name: 'tutorial_PROFILE',
-          path: '/tutorialPROFILE',
-          builder: (context, params) => const TutorialPROFILEWidget(),
-        ),
-        FFRoute(
           name: 'auth_registerPage2',
           path: '/authRegisterPage2',
           builder: (context, params) => AuthRegisterPage2Widget(
@@ -173,11 +158,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ParamType.String,
             ),
           ),
-        ),
-        FFRoute(
-          name: 'main_homePage_OLD',
-          path: '/mainHomePageOLD',
-          builder: (context, params) => const MainHomePageOLDWidget(),
         ),
         FFRoute(
           name: 'main_homePage',
@@ -222,7 +202,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               'transfertDataParam',
               ParamType.DataStruct,
               isList: false,
-              structBuilder: TransfertDataStruct.fromSerializableMap,
+              structBuilder: TransferHistoryStruct.fromSerializableMap,
             ),
           ),
         ),
@@ -235,6 +215,26 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ParamType.String,
             ),
           ),
+        ),
+        FFRoute(
+          name: 'NFC_Scan',
+          path: '/nFCScan',
+          builder: (context, params) => const NFCScanWidget(),
+        ),
+        FFRoute(
+          name: 'NFC_Error',
+          path: '/nFCError',
+          builder: (context, params) => const NFCErrorWidget(),
+        ),
+        FFRoute(
+          name: 'NFC_ResultFailure',
+          path: '/nFCResultFailure',
+          builder: (context, params) => const NFCResultFailureWidget(),
+        ),
+        FFRoute(
+          name: 'NFC_ResultSuccess',
+          path: '/nFCResultSuccess',
+          builder: (context, params) => const NFCResultSuccessWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
