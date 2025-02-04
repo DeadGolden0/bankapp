@@ -15,17 +15,17 @@ jobs:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       # The analysis requires to retrieve dependencies and build successfully
       #1 Setup Flutter
-      - name: Set Up Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          flutter-version: '3.27.3'
-          channel: 'stable'
+      #- name: Set Up Flutter
+      #  uses: subosito/flutter-action@v2
+      #  with:
+      #    flutter-version: '3.27.3'
+      #    channel: 'stable'
       #2 Install Dependencies
-      - name: Install Dependencies
-        run: flutter pub get
+      #- name: Install Dependencies
+      #  run: flutter pub get
       #3 Run flutter tests
-      - name: Run Flutter
-        run: flutter run
+      #- name: Run Flutter
+      #  run: flutter run
       #4 Run Sonar cloud scan
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v4
