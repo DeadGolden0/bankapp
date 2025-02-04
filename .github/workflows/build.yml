@@ -32,18 +32,7 @@ jobs:
       #- name: Run Flutter Tests
       #  run: flutter test --coverage
       #6 Run Sonar cloud scan
-      - name: SonarCloud Scan
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v4
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: |
-          export SONAR_SCANNER_VERSION=6.2.1.4610
-          export SONAR_SCANNER_HOME=$HOME/.sonar/sonar-scanner-$SONAR_SCANNER_VERSION-linux-x64
-          curl --create-dirs -sSLo $HOME/.sonar/sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-$SONAR_SCANNER_VERSION-linux-x64.zip
-          unzip -o $HOME/.sonar/sonar-scanner.zip -d $HOME/.sonar/
-          export PATH=$SONAR_SCANNER_HOME/bin:$PATH
-          export SONAR_SCANNER_OPTS="-server"
-          sonar-scanner \
-            -Dsonar.organization=Groupe3 \
-            -Dsonar.projectKey=groupe3keysamere\
-            -Dsonar.sources=/lib\
-            -Dsonar.host.url=https://sonarcloud.io
