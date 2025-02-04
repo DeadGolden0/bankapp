@@ -37,7 +37,7 @@ on:
                 # Step 5: Run tests (optional but recommended for quality checks)
                 # Uncomment if you want to run tests and generate code coverage
                 - name: Run Flutter Tests
-                run: flutter test --coverage
+                run: flutter test --machine --coverage
 
                 # Step 6: Prepare SonarCloud Analysis Configuration
                 - name: Set up SonarCloud
