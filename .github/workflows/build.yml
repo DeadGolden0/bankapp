@@ -14,8 +14,26 @@ jobs:
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       # The analysis requires to retrieve dependencies and build successfully
-      - name: Build
-        run: flutter test --machine --coverage
+      # Step 2: Set up Java (required for SonarCloud scanner)
+      - name: Set Up Java
+        uses: actions/setup-java@v3.12.0
+        with:
+          distribution: 'oracle'
+          java-version: '17'
+      # Step 3: Set up Flutter SDK
+      - name: Set Up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.3'
+          channel: 'stable'
+      # Step 4: Install dependencies
+      - name: Install Dependencies
+        run: flutter pub get
+      # Step 5: Run tests (optional but recommended for quality checks)
+      # Uncomment if you want to run tests and generate code coverage
+      - name: Run Flutter Tests
+        run: flutter test --coverage --machine
+      # SCAN
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v4
         env:
