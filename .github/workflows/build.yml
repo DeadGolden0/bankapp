@@ -1,4 +1,4 @@
-name: Build
+name: Build for Sonar
 on:
   push:
     branches:
@@ -6,28 +6,44 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
-  sonarqube:
-    name: SonarQube
+  sonarcloud:
+    name: SonarCloud
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-      # The analysis requires to retrieve dependencies and build successfully
-      #1 Setup Flutter
-      #- name: Set Up Flutter
-      #  uses: subosito/flutter-action@v2
-      #  with:
-      #    flutter-version: '3.27.3'
-      #    channel: 'stable'
-      #2 Install Dependencies
-      #- name: Install Dependencies
-      #  run: flutter pub get
-      #3 Run flutter tests
-      #- name: Run Flutter
-      #  run: flutter run
-      #4 Run Sonar cloud scan
-      - name: SonarQube Scan
-        uses: SonarSource/sonarqube-scan-action@v4
+      #2 Setup Java
+      - name: Set Up Java
+        uses: actions/setup-java@v3.12.0
+        with:
+          distribution: 'oracle'
+          java-version: '17'
+      #3 Setup Flutter
+      - name: Set Up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.3'
+          channel: 'stable'
+      #4 Install Dependencies
+      - name: Install Dependencies
+        run: flutter pub get
+      #5 Run flutter tests
+      - name: Run Flutter Tests
+        run: flutter test --coverage
+      #6 Run Sonar cloud scan
+      - name: SonarCloud Scan
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: |
+          export SONAR_SCANNER_VERSION=6.2.1.4610
+          export SONAR_SCANNER_HOME=$HOME/.sonar/sonar-scanner-$SONAR_SCANNER_VERSION-linux-x64
+          curl --create-dirs -sSLo $HOME/.sonar/sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-$SONAR_SCANNER_VERSION-linux-x64.zip
+          unzip -o $HOME/.sonar/sonar-scanner.zip -d $HOME/.sonar/
+          export PATH=$SONAR_SCANNER_HOME/bin:$PATH
+          export SONAR_SCANNER_OPTS="-server"
+          sonar-scanner \
+            -Dsonar.organization=Groupe3 \
+            -Dsonar.projectKey=groupe3keysamere\
+            -Dsonar.sources=/lib\
+            -Dsonar.host.url=https://sonarcloud.io
