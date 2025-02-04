@@ -43,10 +43,10 @@ on:
                 - name: Set up SonarCloud
                 uses: SonarSource/sonarqube-scan-action@v4
                 with:
-                  organization: YOUR_ORG  # Replace with your SonarCloud organization
+                  organization: Groupe3 # Replace with your SonarCloud organization
                   token: ${{ secrets.SONAR_TOKEN }}
-                  projectKey: YOUR_PROJECT_KEY  # Replace with your SonarCloud project key
-                  projectName: "Flutter Android App"  # Name of the project in SonarCloud
+                  projectKey: groupe3keysamere  # Replace with your SonarCloud project key
+                  projectName: "BankApp"  # Name of the project in SonarCloud
 
                # Step 7: Run SonarCloud analysis
                - name: SonarCloud Analysis
