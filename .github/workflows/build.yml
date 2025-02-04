@@ -1,55 +1,22 @@
-name : Build for Sonar
-
+name: Build
 on:
   push:
     branches:
       - main
-        pull_request:
-          jobs:
-            sonarcloud:
-              name: SonarCloud Analysis
-              runs-on: ubuntu-latest
-
-              steps:
-                # Step 1: Checkout the repository
-                - uses: actions/checkout@v4
-                with:
-                  fetch-depth: 0  # Ensure a full history is available for a more accurate analysis
-
-                # Step 2: Set up Java (required for SonarCloud scanner)
-                - name: Set Up Java
-                uses: actions/setup-java@v3.12.0
-                with:
-                  distribution: 'oracle'
-                  java-version: '17'
-
-                # Step 3: Set up Flutter SDK
-                - name: Set Up Flutter
-                uses: subosito/flutter-action@v2
-                with: 
-                  flutter-version: '3.24.3'
-                  channel: 'stable'
-
-                # Step 4: Install dependencies
-                - name: Install Dependencies
-                run: flutter pub get
-
-                # Step 5: Run tests (optional but recommended for quality checks)
-                # Uncomment if you want to run tests and generate code coverage
-                - name: Run Flutter Tests
-                run: flutter test --coverage --machine
-
-                # Step 6: Prepare SonarCloud Analysis Configuration
-                - name: Set up SonarCloud
-                uses: SonarSource/sonarqube-scan-action@v4
-                with:
-                  organization: Groupe3 # Replace with your SonarCloud organization
-                  token: ${{ secrets.SONAR_TOKEN }}
-                  projectKey: groupe3keysamere  # Replace with your SonarCloud project key
-                  projectName: "BankApp"  # Name of the project in SonarCloud
-
-               # Step 7: Run SonarCloud analysis
-               - name: SonarCloud Analysis
-               run: sonar-scanner
-               env:
-                 SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+  pull_request:
+    types: [opened, synchronize, reopened]
+jobs:
+  sonarqube:
+    name: SonarQube
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      # The analysis requires to retrieve dependencies and build successfully
+      - name: Build
+        run: flutter test --machine --coverage
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v4
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
