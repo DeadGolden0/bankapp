@@ -82,8 +82,8 @@ jobs:
           git add release-apk/app-release.apk || echo "Aucun changement à ajouter"
           git diff --cached --quiet || (git commit -m "🚀 Nouvelle version APK générée automatiquement" && git push) || echo "Aucun changement à commit"
 
-      - name: 📤 Upload APK Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: release-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
+      #- name: 📤 Upload APK Artifact
+      #  uses: actions/upload-artifact@v4
+      #  with:
+      #    name: release-apk
+      #    path: build/app/outputs/flutter-apk/app-release.apk
