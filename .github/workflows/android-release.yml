@@ -56,7 +56,14 @@ jobs:
           git add android/gradle.properties || echo "Aucun changement à ajouter"
           git diff --cached --quiet || (git commit -m "🤖 Commenter android.enableR8=true automatiquement" && git push) || echo "Aucun changement à commit"
 
-
+      - name: ✏️ Modifier `build.gradle` pour désactiver la signature
+        run: |
+          sed -i 's/signingConfig signingConfigs.debug/\/\/ signingConfig signingConfigs.debug\nsigningConfig null/' android/app/build.gradle
+          sed -i '/buildTypes {/a\ \ \ \ \ \ \ \ minifyEnabled false\n\ \ \ \ \ \ \ \ shrinkResources false' android/app/build.gradle
+          
+      - name: 📄 Vérifier la modification de `build.gradle`
+        run: cat android/app/build.gradle
+        
       - name: 🔍 Run SonarCloud Scan
         uses: SonarSource/sonarqube-scan-action@v4
         env:
@@ -76,16 +83,16 @@ jobs:
           mkdir -p release-apk
           cp build/app/outputs/flutter-apk/app-release.apk release-apk/app-release.apk || echo "APK non trouvé"
 
-      - name: 📤 Commit & Push de APK
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add release-apk/app-release.apk || echo "Aucun changement à ajouter"
-          git diff --cached --quiet || (git commit -m "🚀 Nouvelle version APK générée automatiquement" && git push) || echo "Aucun changement à commit"
+      #- name: 📤 Commit & Push de APK
+      #  run: |
+      #    git config --global user.name "github-actions[bot]"
+      #    git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      #    git add release-apk/app-release.apk || echo "Aucun changement à ajouter"
+      #    git diff --cached --quiet || (git commit -m "🚀 Nouvelle version APK générée automatiquement" && git push) || echo "Aucun changement à commit"
 
 
-      #- name: 📤 Upload APK Artifact
-      #  uses: actions/upload-artifact@v4
-      #  with:
-      #    name: release-apk
-      #    path: build/app/outputs/flutter-apk/app-release.apk
+      - name: 📤 Upload APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-apk
+          path: build/app/outputs/flutter-apk/app-release.apk
