@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Projet1</string>
+	<string>BankApp</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -13,7 +13,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Projet1</string>
+	<string>BankApp</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 
@@ -26,10 +26,10 @@
         <key>CFBundleTypeRole</key>
         <string>Editor</string>
         <key>CFBundleURLName</key>
-        <string>projet1.com</string>
+        <string>bankapp.com</string>
         <key>CFBundleURLSchemes</key>
         <array>
-        <string>projet1</string>
+        <string>bankapp</string>
         </array>
         </dict>
     </array>

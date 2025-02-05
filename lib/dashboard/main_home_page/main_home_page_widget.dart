@@ -1,10 +1,10 @@
 import '/auth/supabase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/backend/supabase/supabase.dart';
-import '/components/empty_transaction/empty_transaction_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:provider/provider.dart';
@@ -433,7 +433,7 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                                 hoverColor: Colors.transparent,
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
-                                  context.pushNamed('NFC_Scan');
+                                  context.pushNamed('NFC_amount');
                                 },
                                 child: Container(
                                   width: 110.0,
@@ -493,11 +493,14 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                         ),
                         Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(
-                              16.0, 16.0, 16.0, 0.0),
+                              16.0, 16.0, 16.0, 16.0),
                           child: FutureBuilder<ApiCallResponse>(
-                            future: UserTransferDataCall.call(
-                              jwtToken: currentJwtToken,
-                            ),
+                            future: (_model.apiRequestCompleter ??=
+                                    Completer<ApiCallResponse>()
+                                      ..complete(UserTransferDataCall.call(
+                                        jwtToken: currentJwtToken,
+                                      )))
+                                .future,
                             builder: (context, snapshot) {
                               // Customize what your widget looks like when it's loading.
                               if (!snapshot.hasData) {
@@ -522,77 +525,144 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                                     listViewUserTransferDataResponse.jsonBody,
                                     r'''$.transfers''',
                                   ).toList();
-                                  if (transfersData.isEmpty) {
-                                    return const EmptyTransactionWidget();
-                                  }
 
-                                  return ListView.builder(
-                                    padding: EdgeInsets.zero,
-                                    primary: false,
-                                    shrinkWrap: true,
-                                    scrollDirection: Axis.vertical,
-                                    itemCount: transfersData.length,
-                                    itemBuilder: (context, transfersDataIndex) {
-                                      final transfersDataItem =
-                                          transfersData[transfersDataIndex];
-                                      return Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 12.0),
-                                        child: Container(
-                                          width:
-                                              MediaQuery.sizeOf(context).width *
-                                                  0.92,
-                                          height: 70.0,
-                                          decoration: BoxDecoration(
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryBackground,
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                          ),
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Builder(
-                                                builder: (context) {
-                                                  if (functions
-                                                      .isCurrentUserUidEqual(
+                                  return RefreshIndicator(
+                                    color: FlutterFlowTheme.of(context).primary,
+                                    backgroundColor: Colors.transparent,
+                                    onRefresh: () async {
+                                      safeSetState(() =>
+                                          _model.apiRequestCompleter = null);
+                                      await _model.waitForApiRequestCompleted();
+                                    },
+                                    child: ListView.builder(
+                                      padding: EdgeInsets.zero,
+                                      primary: false,
+                                      shrinkWrap: true,
+                                      scrollDirection: Axis.vertical,
+                                      itemCount: transfersData.length,
+                                      itemBuilder:
+                                          (context, transfersDataIndex) {
+                                        final transfersDataItem =
+                                            transfersData[transfersDataIndex];
+                                        return Padding(
+                                          padding:
+                                              const EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 0.0, 0.0, 12.0),
+                                          child: Container(
+                                            width: MediaQuery.sizeOf(context)
+                                                    .width *
+                                                0.92,
+                                            height: 70.0,
+                                            decoration: BoxDecoration(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryBackground,
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
+                                            ),
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Builder(
+                                                  builder: (context) {
+                                                    if (functions
+                                                        .isCurrentUserUidEqual(
+                                                            getJsonField(
+                                                      transfersDataItem,
+                                                      r'''$.destinationUserID''',
+                                                    ).toString())) {
+                                                      return Padding(
+                                                        padding:
+                                                            const EdgeInsets.all(8.0),
+                                                        child: Icon(
+                                                          Icons.moving,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .tertiary,
+                                                          size: 34.0,
+                                                        ),
+                                                      );
+                                                    } else {
+                                                      return Padding(
+                                                        padding:
+                                                            const EdgeInsets.all(8.0),
+                                                        child: Icon(
+                                                          Icons.trending_down,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .error,
+                                                          size: 34.0,
+                                                        ),
+                                                      );
+                                                    }
+                                                  },
+                                                ),
+                                                Expanded(
+                                                  child: Padding(
+                                                    padding:
+                                                        const EdgeInsetsDirectional
+                                                            .fromSTEB(12.0, 0.0,
+                                                                0.0, 0.0),
+                                                    child: Column(
+                                                      mainAxisSize:
+                                                          MainAxisSize.max,
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Text(
                                                           getJsonField(
-                                                    transfersDataItem,
-                                                    r'''$.destinationUserID''',
-                                                  ).toString())) {
-                                                    return Padding(
-                                                      padding:
-                                                          const EdgeInsets.all(8.0),
-                                                      child: Icon(
-                                                        Icons.moving,
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .tertiary,
-                                                        size: 34.0,
-                                                      ),
-                                                    );
-                                                  } else {
-                                                    return Padding(
-                                                      padding:
-                                                          const EdgeInsets.all(8.0),
-                                                      child: Icon(
-                                                        Icons.trending_down,
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .error,
-                                                        size: 34.0,
-                                                      ),
-                                                    );
-                                                  }
-                                                },
-                                              ),
-                                              Expanded(
-                                                child: Padding(
+                                                            transfersDataItem,
+                                                            r'''$.reason''',
+                                                          ).toString(),
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .headlineSmall
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Lexend',
+                                                                letterSpacing:
+                                                                    0.0,
+                                                              ),
+                                                        ),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      0.0,
+                                                                      4.0,
+                                                                      0.0,
+                                                                      0.0),
+                                                          child: Text(
+                                                            functions.isCurrentUserUidEqual(
+                                                                    getJsonField(
+                                                              transfersDataItem,
+                                                              r'''$.destinationUserID''',
+                                                            ).toString())
+                                                                ? 'Revenu'
+                                                                : 'Dépense',
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Lexend',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                ),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                                Padding(
                                                   padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
-                                                          12.0, 0.0, 0.0, 0.0),
+                                                          12.0, 0.0, 12.0, 0.0),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -600,21 +670,28 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                                                         MainAxisAlignment
                                                             .center,
                                                     crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
+                                                        CrossAxisAlignment.end,
                                                     children: [
                                                       Text(
-                                                        getJsonField(
+                                                        '${functions.isCurrentUserUidEqual(getJsonField(
                                                           transfersDataItem,
-                                                          r'''$.reason''',
-                                                        ).toString(),
+                                                          r'''$.destinationUserID''',
+                                                        ).toString()) ? '+ ' : '- '}${getJsonField(
+                                                          transfersDataItem,
+                                                          r'''$.amount''',
+                                                        ).toString()}€',
+                                                        textAlign:
+                                                            TextAlign.end,
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .headlineSmall
+                                                                .titleSmall
                                                                 .override(
                                                                   fontFamily:
                                                                       'Lexend',
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primary,
                                                                   letterSpacing:
                                                                       0.0,
                                                                 ),
@@ -628,19 +705,19 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                                                                     0.0,
                                                                     0.0),
                                                         child: Text(
-                                                          functions.isCurrentUserUidEqual(
-                                                                  getJsonField(
+                                                          getJsonField(
                                                             transfersDataItem,
-                                                            r'''$.destinationUserID''',
-                                                          ).toString())
-                                                              ? 'Revenu'
-                                                              : 'Dépense',
+                                                            r'''$.date''',
+                                                          ).toString(),
+                                                          textAlign:
+                                                              TextAlign.end,
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
                                                                     'Lexend',
+                                                                fontSize: 12.0,
                                                                 letterSpacing:
                                                                     0.0,
                                                               ),
@@ -649,108 +726,12 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
                                                     ],
                                                   ),
                                                 ),
-                                              ),
-                                              Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        12.0, 0.0, 12.0, 0.0),
-                                                child: Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.center,
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.end,
-                                                  children: [
-                                                    FutureBuilder<
-                                                        ApiCallResponse>(
-                                                      future:
-                                                          UserTransferDataCall
-                                                              .call(),
-                                                      builder:
-                                                          (context, snapshot) {
-                                                        // Customize what your widget looks like when it's loading.
-                                                        if (!snapshot.hasData) {
-                                                          return Center(
-                                                            child: SizedBox(
-                                                              width: 40.0,
-                                                              height: 40.0,
-                                                              child:
-                                                                  CircularProgressIndicator(
-                                                                valueColor:
-                                                                    AlwaysStoppedAnimation<
-                                                                        Color>(
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .primary,
-                                                                ),
-                                                              ),
-                                                            ),
-                                                          );
-                                                        }
-                                                        final textUserTransferDataResponse =
-                                                            snapshot.data!;
-
-                                                        return Text(
-                                                          '${functions.isCurrentUserUidEqual(getJsonField(
-                                                            transfersDataItem,
-                                                            r'''$.destinationUserID''',
-                                                          ).toString()) ? '+ ' : '- '}${getJsonField(
-                                                            transfersDataItem,
-                                                            r'''$.amount''',
-                                                          ).toString()}€',
-                                                          textAlign:
-                                                              TextAlign.end,
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .titleSmall
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Lexend',
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .primary,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                              ),
-                                                        );
-                                                      },
-                                                    ),
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  4.0,
-                                                                  0.0,
-                                                                  0.0),
-                                                      child: Text(
-                                                        getJsonField(
-                                                          transfersDataItem,
-                                                          r'''$.date''',
-                                                        ).toString(),
-                                                        textAlign:
-                                                            TextAlign.end,
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily:
-                                                                  'Lexend',
-                                                              fontSize: 12.0,
-                                                              letterSpacing:
-                                                                  0.0,
-                                                            ),
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                            ],
+                                              ],
+                                            ),
                                           ),
-                                        ),
-                                      );
-                                    },
+                                        );
+                                      },
+                                    ),
                                   );
                                 },
                               );

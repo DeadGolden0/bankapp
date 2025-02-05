@@ -54,14 +54,7 @@ class _AuthRegisterPageWidgetState extends State<AuthRegisterPageWidget> {
               Container(
                 width: MediaQuery.sizeOf(context).width * 1.0,
                 height: MediaQuery.sizeOf(context).height * 1.0,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    fit: BoxFit.fitWidth,
-                    image: Image.asset(
-                      'assets/images/createAccount_bg@2x.png',
-                    ).image,
-                  ),
-                ),
+                decoration: const BoxDecoration(),
                 child: Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
                   child: Column(
