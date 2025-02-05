@@ -26,3 +26,5 @@ subprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+classpath 'com.android.tools.build:gradle:8.1.3'
