@@ -45,13 +45,14 @@ jobs:
       - name: 📄 Vérifier la modification
         run: cat android/gradle.properties
 
-      - name: 🚀 Commit & Push des modifications
+      - name: 🚀 Commit & Push des modifications de gradle.properties
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add android/gradle.properties
-          git commit -m "🤖 Commenter android.enableR8=true automatiquement"
-          git push
+          git status
+          git add android/gradle.properties || echo "Aucun changement à ajouter"
+          git diff --cached --quiet || (git commit -m "🤖 Commenter android.enableR8=true automatiquement" && git push) || echo "Aucun changement à commit"
+
 
       - name: 🔍 Run SonarCloud Scan
         uses: SonarSource/sonarqube-scan-action@v4
@@ -76,9 +77,9 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add release-apk/app-release.apk
-          git commit -m "🚀 Nouvelle version APK générée automatiquement"
-          git push
+          git add release-apk/app-release.apk || echo "Aucun changement à ajouter"
+          git diff --cached --quiet || (git commit -m "🚀 Nouvelle version APK générée automatiquement" && git push) || echo "Aucun changement à commit"
+
 
       #- name: 📤 Upload APK Artifact
       #  uses: actions/upload-artifact@v4
