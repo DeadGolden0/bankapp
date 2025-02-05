@@ -39,7 +39,7 @@ class _NFCScanWidgetState extends State<NFCScanWidget> {
           _model.nFCScanResult = await actions.startNFCScan();
           if (_model.nFCScanResult?.result != null &&
               _model.nFCScanResult?.result != '') {
-            _model.FailToScan?.cancel();
+            _model.failToScan?.cancel();
             _model.payementResult = await actions.processPayment(
               _model.nFCScanResult!.result,
               currentUserUid,
@@ -67,7 +67,7 @@ class _NFCScanWidgetState extends State<NFCScanWidget> {
               );
             }
           } else {
-            _model.FailToScan?.cancel();
+            _model.failToScan?.cancel();
 
             context.pushNamed('NFC_Error');
 
@@ -75,11 +75,11 @@ class _NFCScanWidgetState extends State<NFCScanWidget> {
           }
         }),
         Future(() async {
-          _model.FailToScan = InstantTimer.periodic(
+          _model.failToScan = InstantTimer.periodic(
             duration: const Duration(milliseconds: 15000),
             callback: (timer) async {
               await actions.nfcScanStop();
-              _model.FailToScan?.cancel();
+              _model.failToScan?.cancel();
 
               context.pushNamed('NFC_Error');
             },
