@@ -34,6 +34,8 @@ class _ProfileEditProfileWidgetState extends State<ProfileEditProfileWidget> {
 
     _model.yourTitleTextController ??= TextEditingController();
     _model.yourTitleFocusNode ??= FocusNode();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

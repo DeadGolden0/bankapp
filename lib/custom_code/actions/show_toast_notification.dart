@@ -20,7 +20,7 @@ ElegantNotification createNotification(
   String type,
   String message,
 ) {
-  final toastDuration = const Duration(seconds: 3);
+  final toastDuration = Duration(seconds: 3);
   final double toastHeight = 50;
   final double toastWidth = 350;
   final double iconSize = 20;

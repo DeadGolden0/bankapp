@@ -48,6 +48,8 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
 
     _model.phoneTextController ??= TextEditingController();
     _model.phoneFocusNode ??= FocusNode();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

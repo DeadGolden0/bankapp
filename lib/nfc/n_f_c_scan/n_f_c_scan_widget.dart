@@ -88,6 +88,8 @@ class _NFCScanWidgetState extends State<NFCScanWidget> {
         }),
       ]);
     });
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

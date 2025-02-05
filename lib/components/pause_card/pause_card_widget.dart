@@ -27,6 +27,8 @@ class _PauseCardWidgetState extends State<PauseCardWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => PauseCardModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

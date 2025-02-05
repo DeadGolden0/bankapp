@@ -22,6 +22,8 @@ class _MainCardsPageWidgetState extends State<MainCardsPageWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => MainCardsPageModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

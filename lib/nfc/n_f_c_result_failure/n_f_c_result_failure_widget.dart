@@ -24,6 +24,8 @@ class _NFCResultFailureWidgetState extends State<NFCResultFailureWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => NFCResultFailureModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

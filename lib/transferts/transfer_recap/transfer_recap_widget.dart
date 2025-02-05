@@ -34,6 +34,8 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => TransferRecapModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
