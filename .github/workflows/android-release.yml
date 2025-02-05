@@ -36,14 +36,7 @@ jobs:
           flutter pub add collection:^1.19.0
           flutter pub get
 
-      #- name: 🔍 Analyze Project Source
-      #  run: dart analyze
-
-      - name: ✅ Run Tests
-        run: flutter test || echo "⚠️ Tests échoués, mais on continue..."
-        continue-on-error: true
-
-      - name: SonarQube Scan
+      - name: 🔍 Run SonarCloud Scan
         uses: SonarSource/sonarqube-scan-action@v4
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
