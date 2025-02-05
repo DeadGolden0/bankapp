@@ -43,6 +43,11 @@ jobs:
         run: flutter test || echo "⚠️ Tests échoués, mais on continue..."
         continue-on-error: true
 
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v4
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
       - name: 📦 Build APK
         run: flutter build apk --release
 
