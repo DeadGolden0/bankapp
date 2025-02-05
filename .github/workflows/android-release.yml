@@ -30,7 +30,7 @@ jobs:
           flutter-version: "3.27.2"
           channel: 'stable'
           cache: true
-
+#
       - name: 📦 Install Dependencies
         run: |
           flutter pub add collection:^1.19.0
