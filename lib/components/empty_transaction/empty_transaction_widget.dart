@@ -25,6 +25,8 @@ class _EmptyTransactionWidgetState extends State<EmptyTransactionWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => EmptyTransactionModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

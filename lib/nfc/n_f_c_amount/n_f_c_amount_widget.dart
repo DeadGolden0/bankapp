@@ -28,6 +28,8 @@ class _NFCAmountWidgetState extends State<NFCAmountWidget> {
 
     _model.amountTextFieldTextController ??= TextEditingController();
     _model.amountTextFieldFocusNode ??= FocusNode();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

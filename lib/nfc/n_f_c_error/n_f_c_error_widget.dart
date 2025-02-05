@@ -24,6 +24,8 @@ class _NFCErrorWidgetState extends State<NFCErrorWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => NFCErrorModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

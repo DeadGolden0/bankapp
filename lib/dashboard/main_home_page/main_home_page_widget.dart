@@ -41,6 +41,8 @@ class _MainHomePageWidgetState extends State<MainHomePageWidget> {
       );
       safeSetState(() {});
     });
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

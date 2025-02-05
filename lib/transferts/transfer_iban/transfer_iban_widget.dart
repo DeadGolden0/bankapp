@@ -37,6 +37,8 @@ class _TransferIbanWidgetState extends State<TransferIbanWidget> {
 
     _model.recipientIBANTextController ??= TextEditingController();
     _model.recipientIBANFocusNode ??= FocusNode();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

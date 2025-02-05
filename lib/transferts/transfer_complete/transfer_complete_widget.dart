@@ -22,6 +22,8 @@ class _TransferCompleteWidgetState extends State<TransferCompleteWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => TransferCompleteModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

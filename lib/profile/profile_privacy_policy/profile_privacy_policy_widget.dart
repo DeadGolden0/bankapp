@@ -22,6 +22,8 @@ class _ProfilePrivacyPolicyWidgetState
   void initState() {
     super.initState();
     _model = createModel(context, () => ProfilePrivacyPolicyModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

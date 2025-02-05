@@ -23,6 +23,8 @@ class _ProfileNotificationsSettingsWidgetState
   void initState() {
     super.initState();
     _model = createModel(context, () => ProfileNotificationsSettingsModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

@@ -27,6 +27,8 @@ class _TransferErrorWidgetState extends State<TransferErrorWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => TransferErrorModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

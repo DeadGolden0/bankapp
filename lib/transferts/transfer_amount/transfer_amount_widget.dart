@@ -29,6 +29,8 @@ class _TransferAmountWidgetState extends State<TransferAmountWidget> {
 
     _model.reasonTextFieldTextController ??= TextEditingController();
     _model.reasonTextFieldFocusNode ??= FocusNode();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
