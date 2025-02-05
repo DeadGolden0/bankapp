@@ -1,39 +1,52 @@
-name: Android Release
+name: 🚀 Android Release
+
 on:
   push:
     branches:
-    - main
+      - main
   pull_request:
     types: [opened, synchronize, reopened]
   workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Action Checkout V4
+      - name: 🔄 Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-      - name: Setup JAVA
+          fetch-depth: 0  # Nécessaire pour un bon suivi des versions
+
+      - name: ☕ Setup JAVA
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin' # See 'Supported distributions' for available options
+          distribution: 'temurin'
           java-version: '21'
-      - name: Setup Flutter SDK
-        uses: flutter-actions/setup-flutter@v4
+
+      - name: 🛠️ Setup Flutter SDK
+        uses: subosito/flutter-action@v2
         with:
           flutter-version: "3.27.2"
           channel: 'stable'
           cache: true
-      - name: Install dependencies
-        run: flutter pub get
-      - name: Analyze project source
+
+      - name: 📦 Install Dependencies
+        run: |
+          flutter pub add collection:^1.19.0
+          flutter pub get
+
+      - name: 🔍 Analyze Project Source
         run: dart analyze
-      - name: Run tests
+
+      - name: ✅ Run Tests
         run: flutter test
-      - name: Start APK build
-        run: flutter build apk
-      #- uses: actions/upload-artifact@v1
-      #  with:
-      #    name: release-apk
-      #    path: build/app/outputs/apk/release/app-release.apk
+
+      - name: 📦 Build APK
+        run: flutter build apk --release
+
+      - name: 📤 Upload APK Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: release-apk
+          path: build/app/outputs/flutter-apk/app-release.apk
