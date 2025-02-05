@@ -64,7 +64,7 @@ jobs:
       - name: ⚡ ZAP Scan
         uses: zaproxy/action-full-scan@v0.12.0
         with:
-          target: 'https://sonarcloud.io/'
+          target: 'https://projet1-v9dg0f.flutterflow.app/'
 
       - name: 🛠️ Créer les dossiers manquants
         run: mkdir -p build/app/outputs/flutter-apk/
