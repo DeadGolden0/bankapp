@@ -219,7 +219,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'NFC_Scan',
           path: '/nFCScan',
-          builder: (context, params) => const NFCScanWidget(),
+          builder: (context, params) => NFCScanWidget(
+            tempTPEAmount: params.getParam(
+              'tempTPEAmount',
+              ParamType.double,
+            ),
+          ),
         ),
         FFRoute(
           name: 'NFC_Error',
@@ -235,6 +240,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'NFC_ResultSuccess',
           path: '/nFCResultSuccess',
           builder: (context, params) => const NFCResultSuccessWidget(),
+        ),
+        FFRoute(
+          name: 'NFC_amount',
+          path: '/nFCAmount',
+          builder: (context, params) => const NFCAmountWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

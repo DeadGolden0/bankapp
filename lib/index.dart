@@ -37,3 +37,4 @@ export '/nfc/n_f_c_result_failure/n_f_c_result_failure_widget.dart'
     show NFCResultFailureWidget;
 export '/nfc/n_f_c_result_success/n_f_c_result_success_widget.dart'
     show NFCResultSuccessWidget;
+export '/nfc/n_f_c_amount/n_f_c_amount_widget.dart' show NFCAmountWidget;

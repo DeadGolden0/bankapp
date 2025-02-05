@@ -67,7 +67,7 @@ class _MyAppState extends State<MyApp> {
 
     _appStateNotifier = AppStateNotifier.instance;
     _router = createRouter(_appStateNotifier);
-    userStream = projet1SupabaseUserStream()
+    userStream = bankAppSupabaseUserStream()
       ..listen((user) {
         _appStateNotifier.update(user);
       });
@@ -90,7 +90,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'Projet1',
+      title: 'BankApp',
       localizationsDelegates: const [
         FFLocalizationsDelegate(),
         GlobalMaterialLocalizations.delegate,

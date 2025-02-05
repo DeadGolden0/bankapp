@@ -11,7 +11,12 @@ import 'n_f_c_scan_model.dart';
 export 'n_f_c_scan_model.dart';
 
 class NFCScanWidget extends StatefulWidget {
-  const NFCScanWidget({super.key});
+  const NFCScanWidget({
+    super.key,
+    required this.tempTPEAmount,
+  });
+
+  final double? tempTPEAmount;
 
   @override
   State<NFCScanWidget> createState() => _NFCScanWidgetState();
@@ -38,7 +43,7 @@ class _NFCScanWidgetState extends State<NFCScanWidget> {
             _model.payementResult = await actions.processPayment(
               _model.nFCScanResult!.result,
               currentUserUid,
-              5.0,
+              widget.tempTPEAmount!,
             );
             if (_model.payementResult?.status == 'success') {
               context.pushNamed(
@@ -64,7 +69,7 @@ class _NFCScanWidgetState extends State<NFCScanWidget> {
           } else {
             _model.FailToScan?.cancel();
 
-            context.pushNamed('main_cardsPage');
+            context.pushNamed('NFC_Error');
 
             return;
           }
@@ -176,7 +181,7 @@ class _NFCScanWidgetState extends State<NFCScanWidget> {
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 15.0),
                                   child: Text(
-                                    '5 €',
+                                    '${widget.tempTPEAmount?.toString()} €',
                                     style: FlutterFlowTheme.of(context)
                                         .headlineMedium
                                         .override(

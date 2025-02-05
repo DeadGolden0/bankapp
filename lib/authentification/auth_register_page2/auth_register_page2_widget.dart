@@ -79,14 +79,7 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
       body: Container(
         width: MediaQuery.sizeOf(context).width * 1.0,
         height: MediaQuery.sizeOf(context).height * 1.0,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            fit: BoxFit.fitWidth,
-            image: Image.asset(
-              'assets/images/login_bg@2x.png',
-            ).image,
-          ),
-        ),
+        decoration: const BoxDecoration(),
         child: Padding(
           padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
           child: SingleChildScrollView(
@@ -106,25 +99,47 @@ class _AuthRegisterPage2WidgetState extends State<AuthRegisterPage2Widget> {
                         return Container(
                           width: 80.0,
                           height: 80.0,
-                          clipBehavior: Clip.antiAlias,
-                          decoration: const BoxDecoration(
+                          decoration: BoxDecoration(
                             shape: BoxShape.circle,
+                            border: Border.all(
+                              color: FlutterFlowTheme.of(context).primary,
+                              width: 2.0,
+                            ),
                           ),
-                          child: Image.memory(
-                            _model.uploadedLocalFile1.bytes ??
-                                Uint8List.fromList([]),
+                          child: Container(
+                            width: 80.0,
+                            height: 80.0,
+                            clipBehavior: Clip.antiAlias,
+                            decoration: const BoxDecoration(
+                              shape: BoxShape.circle,
+                            ),
+                            child: Image.memory(
+                              _model.uploadedLocalFile1.bytes ??
+                                  Uint8List.fromList([]),
+                            ),
                           ),
                         );
                       } else {
                         return Container(
                           width: 80.0,
                           height: 80.0,
-                          clipBehavior: Clip.antiAlias,
-                          decoration: const BoxDecoration(
+                          decoration: BoxDecoration(
                             shape: BoxShape.circle,
+                            border: Border.all(
+                              color: FlutterFlowTheme.of(context).primary,
+                              width: 2.0,
+                            ),
                           ),
-                          child: Image.network(
-                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/finance-app-sample-kugwu4/assets/ijvuhvqbvns6/uiAvatar@2x.png',
+                          child: Container(
+                            width: 80.0,
+                            height: 80.0,
+                            clipBehavior: Clip.antiAlias,
+                            decoration: const BoxDecoration(
+                              shape: BoxShape.circle,
+                            ),
+                            child: Image.network(
+                              'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/finance-app-sample-kugwu4/assets/ijvuhvqbvns6/uiAvatar@2x.png',
+                            ),
                           ),
                         );
                       }
