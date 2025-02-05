@@ -96,14 +96,14 @@ class FFAppState extends ChangeNotifier {
     prefs.setString('ff_accountAppState', _accountAppState.serialize());
   }
 
-  DebugStruct _DEBUG = DebugStruct();
-  DebugStruct get DEBUG => _DEBUG;
-  set DEBUG(DebugStruct value) {
-    _DEBUG = value;
+  DebugStruct _debug = DebugStruct();
+  DebugStruct get debug => _debug;
+  set debug(DebugStruct value) {
+    _debug = value;
   }
 
-  void updateDEBUGStruct(Function(DebugStruct) updateFn) {
-    updateFn(_DEBUG);
+  void updateDebugStruct(Function(DebugStruct) updateFn) {
+    updateFn(_debug);
   }
 }
 

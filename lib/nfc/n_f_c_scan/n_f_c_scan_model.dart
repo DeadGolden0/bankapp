@@ -11,13 +11,13 @@ class NFCScanModel extends FlutterFlowModel<NFCScanWidget> {
   NFCDataStruct? nFCScanResult;
   // Stores action output result for [Custom Action - processPayment] action in NFC_Scan widget.
   ResponseDataStruct? payementResult;
-  InstantTimer? FailToScan;
+  InstantTimer? failToScan;
 
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {
-    FailToScan?.cancel();
+    failToScan?.cancel();
   }
 }

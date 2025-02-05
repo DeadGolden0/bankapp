@@ -439,7 +439,7 @@ class _TransferRecapWidgetState extends State<TransferRecapWidget> {
                                 widget.transfertDataParam?.transferReason,
                               );
                               shouldSetState = true;
-                              FFAppState().DEBUG = DebugStruct(
+                              FFAppState().debug = DebugStruct(
                                 error: _model.transferFunctionOutput?.message,
                               );
                               safeSetState(() {});
