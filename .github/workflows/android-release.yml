@@ -39,16 +39,49 @@ jobs:
           flutter pub add collection:^1.19.0
           flutter pub get
 
+      - name: ✏️ Commenter la ligne `android.enableR8=true`
+        run: sed -i 's/^android.enableR8=true/# android.enableR8=true/g' android/gradle.properties
+
+      - name: 📄 Vérifier la modification
+        run: cat android/gradle.properties
+
+      - name: 🚀 Commit & Push des modifications
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add android/gradle.properties
+          git commit -m "🤖 Commenter android.enableR8=true automatiquement"
+          git push
+
       - name: 🔍 Run SonarCloud Scan
         uses: SonarSource/sonarqube-scan-action@v4
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
-      - name: 📦 Build APK
-        run: flutter build apk --debug
+      - name: 🛠️ Créer les dossiers manquants
+        run: mkdir -p build/app/outputs/flutter-apk/
 
-      - name: 📤 Upload APK Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: release-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
+      - name: 📦 Build APK
+        run: flutter build apk --release
+
+      - name: 🔍 Vérifier où est généré APK
+        run: ls -R build/app/outputs/
+
+      - name: 🚚 Déplacer APK dans un dossier spécifique
+        run: |
+          mkdir -p release-apk
+          cp build/app/outputs/flutter-apk/app-release.apk release-apk/app-release.apk
+
+      - name: 📤 Commit & Push de APK
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add release-apk/app-release.apk
+          git commit -m "🚀 Nouvelle version APK générée automatiquement"
+          git push
+
+      #- name: 📤 Upload APK Artifact
+      #  uses: actions/upload-artifact@v4
+      #  with:
+      #    name: release-apk
+      #    path: build/app/outputs/flutter-apk/app-release.apk
