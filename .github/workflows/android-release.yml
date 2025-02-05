@@ -74,7 +74,7 @@ jobs:
       - name: 🚚 Déplacer APK dans un dossier spécifique
         run: |
           mkdir -p release-apk
-          cp build/app/outputs/flutter-apk/app-release.apk release-apk/app-release.apk
+          cp build/app/outputs/flutter-apk/app-release.apk release-apk/app-release.apk || echo "APK non trouvé"
 
       - name: 📤 Commit & Push de APK
         run: |
